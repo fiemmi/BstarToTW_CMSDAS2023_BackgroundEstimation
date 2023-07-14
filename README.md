@@ -1,4 +1,4 @@
-# $ Z' \rightarrow t \bar{t} $ Background Estimation
+# 𝑍′→𝑡𝑡¯  Background Estimation
 Adapted from background estimation for the 2023 CMSDAS $b^\ast \to tW$ exercise, using the updated version of 2DAlphabet
 
 ## Getting started (in bash shell)
@@ -24,7 +24,7 @@ cmsenv
 Now set up 2DAlphabet:
 ```
 cd ~/public/CMSDAS2023/CMSSW_10_6_14/src/
-git clone https://github.com/ammitra/2DAlphabet.git
+git clone https://github.com/mdmorris/2DAlphabet.git
 git clone --branch 102x https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit.git HiggsAnalysis/CombinedLimit
 curl -s https://raw.githubusercontent.com/lcorcodilos/CombineHarvester/master/CombineTools/scripts/sparse-checkout-ssh.sh | bash
 scram b clean; scram b -j 4
@@ -73,7 +73,7 @@ source twoD-env/bin/activate
 Then you should be good to go!
 
 ## Background estimate
-For this exercise we will use the [`2DAlphabet`](https://github.com/ammitra/2DAlphabet) github package. This package uses `.json` configuration files to specify the input histograms (to perform the fit) and the uncertainties. These uncertainties will be used inside of the `Higgs Combine` backend, the fitting package used widely within CMS. The 2DAlphabet package serves as a nice interface with Combine to allow the user to use the 2DAlphabet method without having to create their own custom version of combine. 
+For this exercise we will use the [`2DAlphabet`](https://github.com/mdmorris/2DAlphabet) github package. This package uses `.json` configuration files to specify the input histograms (to perform the fit) and the uncertainties. These uncertainties will be used inside of the `Higgs Combine` backend, the fitting package used widely within CMS. The 2DAlphabet package serves as a nice interface with Combine to allow the user to use the 2DAlphabet method without having to create their own custom version of combine. 
 
 # Input root files
 
@@ -107,13 +107,14 @@ The configuration file that you will be using is called `bstar.json`, located in
     - `COLOR`: color to plot in the fit (ROOT color schema)
     - `TYPE`: `DATA`, `BKG`, `SIGNAL`
     - `TITLE`: label in the plot legend (LaTeX compatible)
-    - `ALIAS`: if the process has a different filename than standard, this will be what replaces `$process` in the `GLOBAL` section's `FILE` option, so that this process gets picked up properly
+    - `ALIAS`: if the process has a different filename than standard, this will be what replaces `process` in the 
+`GLOBAL` section's `FILE` option, so that this process gets picked up properly
     - `LOC`: the location of the file, using the definitions laid out in `GLOBAL`
 
 * `SYSTEMATICS`
   - This contains the names of all systematic uncertainties you want to apply to the various processes.
   - The `CODE` key describes the type of systematic that will be used in Combine.
-  - The `VAL` key is how we assign the value of that uncertainty. For instance, a `VAL` of `1.018` in the `lumi` (luminosity) means that this systematic has a 1.8% uncertainty on the yield.
+  - The `VAL` key is how we assign the value of that uncertainty. For instance, a `VAL` of `1.018` in the `lumi` (luminosity) means that this systematic has a 1.8\% uncertainty on the yield.
 
 * `BINNING`
   - This section allows us to name and define custom binning schema. After naming the schema, one would define several variables for both `X` and `Y`:
@@ -134,6 +135,43 @@ python ttbar.py
 ```
 
 The output is stored in the `ttbarfits/` output directory by default.
+
+# Running the ML fit for b-tag and y analysis regions
+
+run the `python ttbar.py` command for all 6 regions:
+
+```
+cd regions/2016
+python ttbar.py cen0b
+python ttbar.py cen1b
+python ttbar.py cenbb
+python ttbar.py fwd0b
+python ttbar.py fwd1b
+python ttbar.py fwd2b
+
+```
+
+This will create separate directories labelled by the region and function, for example 
+
+```
+ttbarfits_cen0b_3x1
+```
+
+In the ttbarfits directory, data cards are saved in the signal{XXXXX} directories. In order to combine the data cards from all 6 regions into one inclusive data card, run (still in the `regions/2016` directory)
+
+```
+./combine_cards.sh
+```
+
+The combineTool.py jobsa are submitted to condor, and when the jobs are completed the combined data cards and asysmptotic root files can be found in the new directory `regions/2016/ttbarfits_inclusive`
+
+In order to plot the limit, run the `limits.ipynb` notebook.
+
+Repeat these steps for 2017 and 2018 in `regions/2017` and `regions/2018`
+
+
+
+
 
 The json files for the inclusive histograms are located in `inclusive/`
 The json files for the split b-tag and y regions are locateed in `regions/2016`, `regions/2017`, and `regions/2018`

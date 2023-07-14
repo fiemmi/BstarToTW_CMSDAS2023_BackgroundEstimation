@@ -35,12 +35,12 @@ lumi_8TeV  = "19.7 fb^{-1}"
 lumi_7TeV  = "5.1 fb^{-1}"
 lumi_sqrtS = ""
 
-lumi_13TeV = "13.7 fb^{-1}"
-lumi_2016_13TeV = "3.59 fb^{-1}"
-lumi_2016noAPV_13TeV = "1.61 fb^{-1}"
-lumi_2016APV_13TeV = "1.98 fb^{-1}"
-lumi_2017_13TeV = "4.15 fb^{-1}"
-lumi_2018_13TeV = "6.0 fb^{-1}"
+# lumi_13TeV = "13.7 fb^{-1}"
+# lumi_2016_13TeV = "3.59 fb^{-1}"
+# lumi_2016noAPV_13TeV = "1.61 fb^{-1}"
+# lumi_2016APV_13TeV = "1.98 fb^{-1}"
+# lumi_2017_13TeV = "4.15 fb^{-1}"
+# lumi_2018_13TeV = "6.0 fb^{-1}"
 
 drawLogo      = False
 

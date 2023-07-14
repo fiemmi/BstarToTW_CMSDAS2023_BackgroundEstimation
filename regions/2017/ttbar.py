@@ -64,7 +64,33 @@ _rpf_options = {
     }
 }
 
-params = '1x2'
+params = '3x1'
+
+
+if '0b' in regionby:
+    params = '0x1'
+elif '1b' in regionby:
+    params = '3x1'
+elif '2b' in regionby:
+    params = '3x1'
+    
+    
+rmin = -1
+rmax = 20
+extra='--robustFit=1'
+
+# if 'fwd0b' in regionby:
+#     rmin = -50
+#     rmax = 50
+    
+# if 'fwd1b' in regionby:
+#     rmin = 15
+#     rmax = 50
+    
+if 'cen0b' in regionby:
+    rmin = -5
+    rmax = -1
+#     extra='--robustHesse=1'
 
 # for b*, the P/F regions are named MtwvMtPass and MtwvMtFail
 # so, just need to find and replace Pass/Fail depending on which region we want
@@ -124,7 +150,7 @@ def make_workspace():
     
     
     twoD = TwoDAlphabet('ttbarfits_'+regionby+'_'+params, 'ttbar_'+regionby+'.json', loadPrevious=False)
-
+    
     # Create the data - BKGs histograms
     qcd_hists = twoD.InitQCDHists()
 
@@ -208,7 +234,7 @@ def ML_fit(signal):
     # Run the fit! Will run in the area specified by the `subtag` (ie. sub-directory) argument
     # and use the card in that area. Via the cardOrW argument, a different card or workspace can be
     # supplied (passed to the -d option of Combine).
-    twoD.MLfit('ttbar-{}_area'.format(signal),rMin=-1,rMax=20,verbosity=0,extra='--robustFit=1')
+    twoD.MLfit('ttbar-{}_area'.format(signal),rMin=rmin,rMax=rmax,verbosity=0,extra=extra)
 
 def plot_fit(signal):
     '''
