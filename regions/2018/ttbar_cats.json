@@ -12,51 +12,51 @@
     },
     "REGIONS": {
         "cen2bPass": {
-            "PROCESSES": ["18_SIGNAME","18_TTbar"],
+            "PROCESSES": ["16_SIGNAME","16_TTbar"],
             "BINNING": "default"
             },
         "cen2bFail": {
-                "PROCESSES": ["18_SIGNAME","18_TTbar"],
+                "PROCESSES": ["16_SIGNAME","16_TTbar"],
                 "BINNING": "default"
             },
         "cen1bPass": {
-            "PROCESSES": ["18_SIGNAME","18_TTbar"],
+            "PROCESSES": ["16_SIGNAME","16_TTbar"],
             "BINNING": "default"
             },
         "cen1bFail": {
-                "PROCESSES": ["18_SIGNAME","18_TTbar"],
+                "PROCESSES": ["16_SIGNAME","16_TTbar"],
                 "BINNING": "default"
             },
         "cen0bPass": {
-            "PROCESSES": ["18_SIGNAME","18_TTbar"],
+            "PROCESSES": ["16_SIGNAME","16_TTbar"],
             "BINNING": "default"
             },
         "cen0bFail": {
-                "PROCESSES": ["18_SIGNAME","18_TTbar"],
+                "PROCESSES": ["16_SIGNAME","16_TTbar"],
                 "BINNING": "default"
             },
         "fwd2bPass": {
-            "PROCESSES": ["18_SIGNAME","18_TTbar"],
+            "PROCESSES": ["16_SIGNAME","16_TTbar"],
             "BINNING": "default"
             },
         "fwd2bFail": {
-                "PROCESSES": ["18_SIGNAME","18_TTbar"],
+                "PROCESSES": ["16_SIGNAME","16_TTbar"],
                 "BINNING": "default"
             },
         "fwd1bPass": {
-            "PROCESSES": ["18_SIGNAME","18_TTbar"],
+            "PROCESSES": ["16_SIGNAME","16_TTbar"],
             "BINNING": "default"
             },
         "fwd1bFail": {
-                "PROCESSES": ["18_SIGNAME","18_TTbar"],
+                "PROCESSES": ["16_SIGNAME","16_TTbar"],
                 "BINNING": "default"
             },
         "fwd0bPass": {
-            "PROCESSES": ["18_SIGNAME","18_TTbar"],
+            "PROCESSES": ["16_SIGNAME","16_TTbar"],
             "BINNING": "default"
             },
         "fwd0bFail": {
-                "PROCESSES": ["18_SIGNAME","18_TTbar"],
+                "PROCESSES": ["16_SIGNAME","16_TTbar"],
                 "BINNING": "default"
             }
     },
@@ -68,10 +68,10 @@
                 "TYPE": "DATA",
                 "TITLE": "Data",
                 "HELP": "since the data file is not called TTbarAllHaddata_obs.root, we make an alias to the real name - shown below",
-                "ALIAS": "18_Data",
+                "ALIAS": "16_Data",
                 "LOC": "path/FILE:HIST"
             },
-        "18_SIGNAME": {
+        "16_SIGNAME": {
                 "SYSTEMATICS":["lumi", "btag_unc", "pileup", "pdf", "jes", "jer", "btag"],
                 "SCALE": 1.0, 
                 "COLOR": 1, 
@@ -79,7 +79,7 @@
                 "TITLE": "g_{RS} (3 TeV)",
                 "LOC": "path/FILE:HIST"
             },
-            "18_TTbar": {
+            "16_TTbar": {
                 "SYSTEMATICS": ["lumi","ttbar_xsec", "btag_unc", "pileup", "pdf", "jes", "jer", "btag"],
                 "SCALE": 1.0,
                 "COLOR": 2,

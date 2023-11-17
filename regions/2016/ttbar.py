@@ -10,7 +10,20 @@ import numpy as np
 
 
 regionby = sys.argv[1]
+# dname = sys.argv[2]
+
+
+if len(sys.argv) > 2:
+    dname = sys.argv[2] + '_'
+else:
+    dname = ''
+
+    
+params = '2x1'
+
 print('regionby', regionby)
+savedirname = 'ttbarfits_'+regionby+'_'+dname+params
+print 'saving to {0}'.format(savedirname)
 
 def _generate_constraints(nparams):
     out = {}
@@ -64,20 +77,29 @@ _rpf_options = {
     }
 }
 
-params = '3x1'
 
+params = '2x1'
 
 if '0b' in regionby:
     params = '0x1'
 elif '1b' in regionby:
-    params = '3x1'
+    params = '2x1'
 elif '2b' in regionby:
-    params = '3x1'
+    params = '2x1'
     
     
 rmin = -1
 rmax = 20
 extra='--robustFit=1'
+
+# if 'cen2b' in regionby:
+#     params = '1x2'
+# elif 'fwd2b' in regionby:
+#     params = '1x2'
+
+#     rmin = -1
+#     rmax = 1
+#     extra=''
 
 # if 'fwd0b' in regionby:
 #     rmin = -50
@@ -87,9 +109,9 @@ extra='--robustFit=1'
 #     rmin = 15
 #     rmax = 50
     
-if 'cen0b' in regionby:
-    rmin = -5
-    rmax = -1
+# if 'cen0b' in regionby:
+#     rmin = -5
+#     rmax = -1
 #     extra='--robustHesse=1'
 
 # for b*, the P/F regions are named MtwvMtPass and MtwvMtFail
@@ -149,7 +171,7 @@ def make_workspace():
     
     
     
-    twoD = TwoDAlphabet('ttbarfits_'+regionby+'_'+params, 'ttbar_'+regionby+'.json', loadPrevious=False)
+    twoD = TwoDAlphabet(savedirname, 'ttbar_'+regionby+'.json', loadPrevious=False)
     
     # Create the data - BKGs histograms
     qcd_hists = twoD.InitQCDHists()
@@ -191,10 +213,10 @@ def make_workspace():
         # We specify the name of the process, the region it lives in, and the object itself.
         # The process is assumed to be a background and colored yellow but this can be changed
         # with optional arguments.
-        twoD.AddAlphaObj('QCD',f,qcd_f,title='QCD')
+        twoD.AddAlphaObj('QCD',f,qcd_f,title='NTMJ')
 
         qcd_p = qcd_f.Multiply(fail_name.replace('Fail','Pass'), qcd_rpf)
-        twoD.AddAlphaObj('QCD', p, qcd_p, title='QCD')
+        twoD.AddAlphaObj('QCD', p, qcd_p, title='NTMJ')
 
     # save the workspace!
     twoD.Save()
@@ -212,7 +234,7 @@ def ML_fit(signal):
     '''
 
     # the default workspace directory, created in make_workspace(), is called ttbarfits16_3x1/
-    twoD = TwoDAlphabet('ttbarfits_'+regionby+'_'+params, 'ttbar_'+regionby+'.json', loadPrevious=True)
+    twoD = TwoDAlphabet(savedirname, 'ttbar_'+regionby+'.json', loadPrevious=True)
 
     # Create a subset of the primary ledger using the select() method.
     # The select() method takes as a function as its first argument
@@ -240,7 +262,7 @@ def plot_fit(signal):
     '''
     Plots the fits from ML_fit() using 2DAlphabet
     '''
-    twoD = TwoDAlphabet('ttbarfits_'+regionby+'_'+params, 'ttbar_'+regionby+'.json', loadPrevious=True)
+    twoD = TwoDAlphabet(savedirname, 'ttbar_'+regionby+'.json', loadPrevious=True)
     subset = twoD.ledger.select(_select_signal, 'signal{}'.format(signal))
     twoD.StdPlots('ttbar-{}_area'.format(signal), subset)
 
@@ -252,7 +274,7 @@ def perform_limit(signal):
     something reasonable to create the Asimov toy.
     '''
     # Returns a dictionary of the TF parameters with the names as keys and the post-fit values as dict values.
-    twoD = TwoDAlphabet('ttbarfits_'+regionby+'_'+params, 'ttbar_'+regionby+'.json', loadPrevious=True)
+    twoD = TwoDAlphabet(savedirname, 'ttbar_'+regionby+'.json', loadPrevious=True)
 
     # GetParamsOnMatch() opens up the workspace's fitDiagnosticsTest.root and selects the rratio for the background
     params_to_set = twoD.GetParamsOnMatch('rratio*', 'ttbar-{}_area'.format(signal), 'b')
@@ -271,13 +293,13 @@ def perform_limit(signal):
         twoD.MakeCard(subset, signame+'_area')
         # Run the blinded limit with our dictionary of TF parameters
         # NOTE: we are running without blinding (blinding seems to cause an issue with the limit plotting script...)
-        twoD.Limit(
-            subtag=signame+'_area',
-            blindData=False,
-            verbosity=0,
-            setParams=params_to_set,
-            condor=False
-        )
+#         twoD.Limit(
+#             subtag=signame+'_area',
+#             blindData=False,
+#             verbosity=0,
+#             setParams=params_to_set,
+#             condor=False
+#         )
         
         
 def GoF(signal, tf='', nToys=500, condor=False):

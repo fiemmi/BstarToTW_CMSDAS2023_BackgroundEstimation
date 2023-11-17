@@ -1,0 +1,1102 @@
+nohup: ignoring input
+making dir ttbarfits_inclusive
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalRSGluon1000_area/signalRSGluon1000_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon1000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalRSGluon1000_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 72.3275
+Expected  2.5%: r < 15.7676
+Expected 16.0%: r < 21.0341
+Expected 50.0%: r < 29.2500
+Expected 84.0%: r < 40.7926
+Expected 97.5%: r < 54.5235
+
+Done in 1.70 min (cpu), 1.70 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon1000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalRSGluon1500_area/signalRSGluon1500_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon1500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalRSGluon1500_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.2988
+Expected  2.5%: r < 0.5811
+Expected 16.0%: r < 0.7722
+Expected 50.0%: r < 1.0703
+Expected 84.0%: r < 1.4841
+Expected 97.5%: r < 1.9752
+
+Done in 1.61 min (cpu), 1.61 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon1500_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalRSGluon2000_area/signalRSGluon2000_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon2000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalRSGluon2000_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 2.5123
+Expected  2.5%: r < 0.1698
+Expected 16.0%: r < 0.2248
+Expected 50.0%: r < 0.3105
+Expected 84.0%: r < 0.4294
+Expected 97.5%: r < 0.5702
+
+Done in 1.29 min (cpu), 1.30 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon2000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalRSGluon2500_area/signalRSGluon2500_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon2500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalRSGluon2500_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 18.8970
+Expected  2.5%: r < 0.0777
+Expected 16.0%: r < 0.1029
+Expected 50.0%: r < 0.1421
+Expected 84.0%: r < 0.1970
+Expected 97.5%: r < 0.2622
+
+Done in 2.10 min (cpu), 2.11 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon2500_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalRSGluon3000_area/signalRSGluon3000_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon3000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalRSGluon3000_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 10.9840
+Expected  2.5%: r < 0.0489
+Expected 16.0%: r < 0.0651
+Expected 50.0%: r < 0.0913
+Expected 84.0%: r < 0.1277
+Expected 97.5%: r < 0.1716
+
+Done in 2.27 min (cpu), 2.27 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon3000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalRSGluon3500_area/signalRSGluon3500_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon3500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalRSGluon3500_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 3.2850
+Expected  2.5%: r < 0.0381
+Expected 16.0%: r < 0.0514
+Expected 50.0%: r < 0.0728
+Expected 84.0%: r < 0.1032
+Expected 97.5%: r < 0.1405
+
+Done in 2.09 min (cpu), 2.10 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon3500_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalRSGluon4000_area/signalRSGluon4000_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon4000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalRSGluon4000_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 3.8314
+Expected  2.5%: r < 0.0322
+Expected 16.0%: r < 0.0447
+Expected 50.0%: r < 0.0649
+Expected 84.0%: r < 0.0952
+Expected 97.5%: r < 0.1332
+
+Done in 1.66 min (cpu), 1.66 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon4000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalRSGluon4500_area/signalRSGluon4500_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon4500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalRSGluon4500_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 6.5275
+Expected  2.5%: r < 0.0350
+Expected 16.0%: r < 0.0491
+Expected 50.0%: r < 0.0728
+Expected 84.0%: r < 0.1084
+Expected 97.5%: r < 0.1538
+
+Done in 2.31 min (cpu), 2.31 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon4500_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalRSGluon5000_area/signalRSGluon5000_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon5000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalRSGluon5000_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 58.2081
+Expected  2.5%: r < 0.0472
+Expected 16.0%: r < 0.0652
+Expected 50.0%: r < 0.0952
+Expected 84.0%: r < 0.1396
+Expected 97.5%: r < 0.1953
+
+Done in 1.78 min (cpu), 1.79 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon5000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1000_DM_area/signalZPrime1000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1000_DM_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 41.8388
+Expected  2.5%: r < 2.8423
+Expected 16.0%: r < 3.8917
+Expected 50.0%: r < 5.6406
+Expected 84.0%: r < 8.2487
+Expected 97.5%: r < 11.5528
+
+Done in 1.27 min (cpu), 1.28 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1500_DM_area/signalZPrime1500_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1500_DM_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.6191
+Expected  2.5%: r < 0.1157
+Expected 16.0%: r < 0.1556
+Expected 50.0%: r < 0.2178
+Expected 84.0%: r < 0.3046
+Expected 97.5%: r < 0.4066
+
+Done in 1.38 min (cpu), 1.38 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1500_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime2000_DM_area/signalZPrime2000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime2000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime2000_DM_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 7.2095
+Expected  2.5%: r < 0.0318
+Expected 16.0%: r < 0.0425
+Expected 50.0%: r < 0.0591
+Expected 84.0%: r < 0.0822
+Expected 97.5%: r < 0.1092
+
+Done in 1.65 min (cpu), 1.66 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime2000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime2500_DM_area/signalZPrime2500_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime2500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime2500_DM_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0098
+Expected  2.5%: r < 0.0109
+Expected 16.0%: r < 0.0141
+Expected 50.0%: r < 0.0200
+Expected 84.0%: r < 0.0280
+Expected 97.5%: r < 0.0380
+
+Done in 2.09 min (cpu), 2.09 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime2500_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime3000_DM_area/signalZPrime3000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime3000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime3000_DM_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.4397
+Expected  2.5%: r < 0.0051
+Expected 16.0%: r < 0.0067
+Expected 50.0%: r < 0.0103
+Expected 84.0%: r < 0.0139
+Expected 97.5%: r < 0.0195
+
+Done in 1.78 min (cpu), 1.78 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime3000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime3500_DM_area/signalZPrime3500_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime3500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime3500_DM_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 13.5407
+Expected  2.5%: r < 0.0025
+Expected 16.0%: r < 0.0030
+Expected 50.0%: r < 0.0044
+Expected 84.0%: r < 0.0069
+Expected 97.5%: r < 0.0097
+
+Done in 2.01 min (cpu), 2.01 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime3500_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime4000_DM_area/signalZPrime4000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime4000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime4000_DM_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 18.2425
+Expected  2.5%: r < 0.0009
+Expected 16.0%: r < 0.0013
+Expected 50.0%: r < 0.0024
+Expected 84.0%: r < 0.0034
+Expected 97.5%: r < 0.0051
+
+Done in 2.35 min (cpu), 2.35 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime4000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime4500_DM_area/signalZPrime4500_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime4500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime4500_DM_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 12.0533
+Expected  2.5%: r < 0.0004
+Expected 16.0%: r < 0.0006
+Expected 50.0%: r < 0.0015
+Expected 84.0%: r < 0.0018
+Expected 97.5%: r < 0.0035
+
+Done in 2.18 min (cpu), 2.18 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime4500_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime5000_DM_area/signalZPrime5000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime5000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime5000_DM_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0323
+
+Done in 1.97 min (cpu), 1.97 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime5000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1000_10_area/signalZPrime1000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1000_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 17.6535
+Expected  2.5%: r < 1.5591
+Expected 16.0%: r < 2.1685
+Expected 50.0%: r < 3.2188
+Expected 84.0%: r < 4.9508
+Expected 97.5%: r < 7.4260
+
+Done in 1.07 min (cpu), 1.08 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1200_10_area/signalZPrime1200_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1200_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1200_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 90.0530
+Expected  2.5%: r < 1.8964
+Expected 16.0%: r < 2.6143
+Expected 50.0%: r < 3.7344
+Expected 84.0%: r < 5.3718
+Expected 97.5%: r < 7.3119
+
+Done in 2.26 min (cpu), 2.26 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1200_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1400_10_area/signalZPrime1400_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1400_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1400_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 46.9187
+Expected  2.5%: r < 0.3044
+Expected 16.0%: r < 0.4064
+Expected 50.0%: r < 0.5605
+Expected 84.0%: r < 0.7817
+Expected 97.5%: r < 1.0377
+
+Done in 2.10 min (cpu), 2.10 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1400_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1800_10_area/signalZPrime1800_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1800_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1800_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 3.2911
+Expected  2.5%: r < 0.0703
+Expected 16.0%: r < 0.0938
+Expected 50.0%: r < 0.1304
+Expected 84.0%: r < 0.1829
+Expected 97.5%: r < 0.2446
+
+Done in 1.96 min (cpu), 1.96 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1800_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime2000_10_area/signalZPrime2000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime2000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime2000_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.3255
+Expected  2.5%: r < 0.0384
+Expected 16.0%: r < 0.0513
+Expected 50.0%: r < 0.0713
+Expected 84.0%: r < 0.0997
+Expected 97.5%: r < 0.1340
+
+Done in 1.40 min (cpu), 1.40 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime2000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime2500_10_area/signalZPrime2500_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime2500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime2500_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.5683
+Expected  2.5%: r < 0.0120
+Expected 16.0%: r < 0.0161
+Expected 50.0%: r < 0.0220
+Expected 84.0%: r < 0.0314
+Expected 97.5%: r < 0.0433
+
+Done in 2.12 min (cpu), 2.12 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime2500_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime3000_10_area/signalZPrime3000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime3000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime3000_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 5.6543
+Expected  2.5%: r < 0.0039
+Expected 16.0%: r < 0.0058
+Expected 50.0%: r < 0.0083
+Expected 84.0%: r < 0.0117
+Expected 97.5%: r < 0.0172
+
+Done in 1.74 min (cpu), 1.74 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime3000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime3500_10_area/signalZPrime3500_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime3500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime3500_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 5.7345
+
+Done in 1.41 min (cpu), 1.41 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime3500_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime4000_10_area/signalZPrime4000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime4000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime4000_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.5786
+
+Done in 2.00 min (cpu), 2.01 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime4000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime4500_10_area/signalZPrime4500_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime4500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime4500_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0033
+
+Done in 2.23 min (cpu), 2.24 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime4500_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime5000_10_area/signalZPrime5000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime5000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime5000_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0051
+
+Done in 2.19 min (cpu), 2.19 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime5000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime6000_10_area/signalZPrime6000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime6000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime6000_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0105
+
+Done in 2.39 min (cpu), 2.39 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime6000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime7000_10_area/signalZPrime7000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime7000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime7000_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 2.6066
+
+Done in 1.49 min (cpu), 1.49 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime7000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1000_30_area/signalZPrime1000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1000_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 16.6717
+Expected  2.5%: r < 0.8490
+Expected 16.0%: r < 1.3223
+Expected 50.0%: r < 2.1953
+Expected 84.0%: r < 3.6479
+Expected 97.5%: r < 5.6348
+
+Done in 1.10 min (cpu), 1.10 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1200_30_area/signalZPrime1200_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1200_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1200_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 152.0468
+Expected  2.5%: r < 0.7654
+Expected 16.0%: r < 1.0406
+Expected 50.0%: r < 1.4844
+Expected 84.0%: r < 2.1530
+Expected 97.5%: r < 2.9922
+
+Done in 2.24 min (cpu), 2.24 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1200_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1400_30_area/signalZPrime1400_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1400_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1400_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 2.6370
+Expected  2.5%: r < 0.4654
+Expected 16.0%: r < 0.6208
+Expected 50.0%: r < 0.8633
+Expected 84.0%: r < 1.2039
+Expected 97.5%: r < 1.6092
+
+Done in 1.68 min (cpu), 1.68 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1400_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1800_30_area/signalZPrime1800_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1800_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1800_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 2.6433
+Expected  2.5%: r < 0.1184
+Expected 16.0%: r < 0.1580
+Expected 50.0%: r < 0.2197
+Expected 84.0%: r < 0.3064
+Expected 97.5%: r < 0.4124
+
+Done in 1.56 min (cpu), 1.57 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1800_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime2000_30_area/signalZPrime2000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime2000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime2000_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 69.3772
+Expected  2.5%: r < 0.0565
+Expected 16.0%: r < 0.0766
+Expected 50.0%: r < 0.1079
+Expected 84.0%: r < 0.1535
+Expected 97.5%: r < 0.2094
+
+Done in 2.29 min (cpu), 2.29 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime2000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime2500_30_area/signalZPrime2500_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime2500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime2500_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 1.2751
+Expected  2.5%: r < 0.0197
+Expected 16.0%: r < 0.0267
+Expected 50.0%: r < 0.0376
+Expected 84.0%: r < 0.0541
+Expected 97.5%: r < 0.0753
+
+Done in 1.60 min (cpu), 1.60 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime2500_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime3000_30_area/signalZPrime3000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime3000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime3000_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 26.0886
+Expected  2.5%: r < 0.0080
+Expected 16.0%: r < 0.0107
+Expected 50.0%: r < 0.0151
+Expected 84.0%: r < 0.0233
+Expected 97.5%: r < 0.0336
+
+Done in 2.31 min (cpu), 2.31 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime3000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime3500_30_area/signalZPrime3500_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime3500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime3500_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.8990
+Expected  2.5%: r < 0.0028
+Expected 16.0%: r < 0.0041
+Expected 50.0%: r < 0.0063
+Expected 84.0%: r < 0.0100
+Expected 97.5%: r < 0.0155
+
+Done in 1.67 min (cpu), 1.67 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime3500_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime4000_30_area/signalZPrime4000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime4000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime4000_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 1.7710
+Expected  2.5%: r < 0.0013
+Expected 16.0%: r < 0.0021
+Expected 50.0%: r < 0.0034
+Expected 84.0%: r < 0.0056
+Expected 97.5%: r < 0.0083
+
+Done in 1.64 min (cpu), 1.64 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime4000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime4500_30_area/signalZPrime4500_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime4500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime4500_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 1.8217
+Expected  2.5%: r < 0.0009
+Expected 16.0%: r < 0.0013
+Expected 50.0%: r < 0.0024
+Expected 84.0%: r < 0.0034
+Expected 97.5%: r < 0.0057
+
+Done in 1.64 min (cpu), 1.64 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime4500_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime5000_30_area/signalZPrime5000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime5000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime5000_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.7147
+Expected  2.5%: r < 0.0004
+Expected 16.0%: r < 0.0012
+Expected 50.0%: r < 0.0015
+Expected 84.0%: r < 0.0026
+Expected 97.5%: r < 0.0040
+
+Done in 1.74 min (cpu), 1.74 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime5000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime6000_30_area/signalZPrime6000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime6000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime6000_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 2.7890
+Expected  2.5%: r < 0.0004
+Expected 16.0%: r < 0.0006
+Expected 50.0%: r < 0.0015
+Expected 84.0%: r < 0.0018
+Expected 97.5%: r < 0.0035
+
+Done in 1.56 min (cpu), 1.56 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime6000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime7000_30_area/signalZPrime7000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime7000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime7000_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 3.8571
+
+Done in 1.26 min (cpu), 1.27 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime7000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1000_1_area/signalZPrime1000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1000_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 56.4593
+Expected  2.5%: r < 1.5411
+Expected 16.0%: r < 2.1342
+Expected 50.0%: r < 3.1562
+Expected 84.0%: r < 4.8421
+Expected 97.5%: r < 7.2013
+
+Done in 1.74 min (cpu), 1.74 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1200_1_area/signalZPrime1200_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1200_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1200_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 12.5030
+Expected  2.5%: r < 1.4865
+Expected 16.0%: r < 2.0319
+Expected 50.0%: r < 2.8828
+Expected 84.0%: r < 4.1124
+Expected 97.5%: r < 5.5849
+
+Done in 1.10 min (cpu), 1.10 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1200_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1400_1_area/signalZPrime1400_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1400_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1400_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0429
+Expected  2.5%: r < 0.1787
+Expected 16.0%: r < 0.2374
+Expected 50.0%: r < 0.3291
+Expected 84.0%: r < 0.4563
+Expected 97.5%: r < 0.6073
+
+Done in 1.47 min (cpu), 1.47 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1400_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1600_1_area/signalZPrime1600_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1600_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1600_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 9.1335
+Expected  2.5%: r < 0.0551
+Expected 16.0%: r < 0.0733
+Expected 50.0%: r < 0.1016
+Expected 84.0%: r < 0.1412
+Expected 97.5%: r < 0.1877
+
+Done in 1.94 min (cpu), 1.94 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1600_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1800_1_area/signalZPrime1800_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1800_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime1800_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.2056
+Expected  2.5%: r < 0.0334
+Expected 16.0%: r < 0.0446
+Expected 50.0%: r < 0.0620
+Expected 84.0%: r < 0.0862
+Expected 97.5%: r < 0.1154
+
+Done in 2.05 min (cpu), 2.05 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1800_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime2000_1_area/signalZPrime2000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime2000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime2000_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0380
+Expected  2.5%: r < 0.0168
+Expected 16.0%: r < 0.0216
+Expected 50.0%: r < 0.0308
+Expected 84.0%: r < 0.0425
+Expected 97.5%: r < 0.0573
+
+Done in 1.90 min (cpu), 1.90 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime2000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime2500_1_area/signalZPrime2500_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime2500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime2500_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.7462
+Expected  2.5%: r < 0.0049
+Expected 16.0%: r < 0.0063
+Expected 50.0%: r < 0.0093
+Expected 84.0%: r < 0.0125
+Expected 97.5%: r < 0.0169
+
+Done in 2.08 min (cpu), 2.08 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime2500_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime3000_1_area/signalZPrime3000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime3000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime3000_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 2.3986
+Expected  2.5%: r < 0.0013
+Expected 16.0%: r < 0.0021
+Expected 50.0%: r < 0.0034
+Expected 84.0%: r < 0.0047
+Expected 97.5%: r < 0.0065
+
+Done in 1.73 min (cpu), 1.73 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime3000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime3500_1_area/signalZPrime3500_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime3500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime3500_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0009
+
+Done in 2.38 min (cpu), 2.38 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime3500_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime4000_1_area/signalZPrime4000_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime4000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime4000_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0003
+
+Done in 2.46 min (cpu), 2.46 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime4000_card.txt -n .Test
+
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime4500_1_area/signalZPrime4500_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime4500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions_yonly/2017/ttbarfits_inclusive/signalZPrime4500_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 12 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0010
+
+Done in 2.45 min (cpu), 2.45 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime4500_card.txt -n .Test

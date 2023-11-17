@@ -1,0 +1,4 @@
+ttbarfits18_3x1/signalRSGluon1000_area, ttbarfits18_3x1/signalRSGluon1500_area, ttbarfits18_3x1/signalRSGluon2000_area, ttbarfits18_3x1/signalRSGluon2500_area, ttbarfits18_3x1/signalRSGluon3000_area, ttbarfits18_3x1/signalRSGluon3500_area, ttbarfits18_3x1/signalRSGluon4000_area, ttbarfits18_3x1/signalRSGluon4500_area, ttbarfits18_3x1/signalRSGluon5000_area
+1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000
+26.065, 4.5747, 1.23864, 0.40768, 0.16757, 0.07085, 0.036491, 0.020839, 0.0118235
+2.103, 0.3656, 0.09417, 0.03039, 0.01163, 0.005138, 0.002556, 0.001422, 0.0008631

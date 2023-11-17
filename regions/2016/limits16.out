@@ -1,0 +1,1288 @@
+nohup: ignoring input
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon1000_area/signalRSGluon1000_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon1000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon1000_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalRSGluon1000_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalRSGluon1000_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon1000_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon1500_area/signalRSGluon1500_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon1500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon1500_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalRSGluon1500_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalRSGluon1500_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon1500_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon2000_area/signalRSGluon2000_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon2000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon2000_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 36 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 9 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.3718
+Expected  2.5%: r < 0.0505
+Expected 16.0%: r < 0.0674
+Expected 50.0%: r < 0.0938
+Expected 84.0%: r < 0.1307
+Expected 97.5%: r < 0.1748
+
+Done in 11.31 min (cpu), 11.33 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon2000_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon2500_area/signalRSGluon2500_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon2500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon2500_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalRSGluon2500_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalRSGluon2500_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon2500_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon3000_area/signalRSGluon3000_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon3000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon3000_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalRSGluon3000_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalRSGluon3000_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon3000_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon3500_area/signalRSGluon3500_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon3500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon3500_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalRSGluon3500_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalRSGluon3500_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon3500_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon4000_area/signalRSGluon4000_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon4000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon4000_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalRSGluon4000_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalRSGluon4000_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon4000_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon4500_area/signalRSGluon4500_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon4500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon4500_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalRSGluon4500_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalRSGluon4500_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon4500_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon5000_area/signalRSGluon5000_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon5000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon5000_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalRSGluon5000_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalRSGluon5000_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon5000_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalRSGluon5500_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon5500_area/signalRSGluon5500_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon5500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon5500_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon5500_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalRSGluon6000_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon6000_area/signalRSGluon6000_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon6000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalRSGluon6000_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon6000_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1000_DM_area/signalZPrime1000_DM_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1000_DM_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1000_DM_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime1000_DM_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1000_DM_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1000_DM_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1500_DM_area/signalZPrime1500_DM_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1500_DM_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1500_DM_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime1500_DM_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1500_DM_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1500_DM_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2000_DM_area/signalZPrime2000_DM_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime2000_DM_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2000_DM_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime2000_DM_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime2000_DM_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime2000_DM_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2500_DM_area/signalZPrime2500_DM_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime2500_DM_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2500_DM_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime2500_DM_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime2500_DM_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime2500_DM_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3000_DM_area/signalZPrime3000_DM_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime3000_DM_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3000_DM_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime3000_DM_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime3000_DM_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime3000_DM_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3500_DM_area/signalZPrime3500_DM_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime3500_DM_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3500_DM_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime3500_DM_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime3500_DM_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime3500_DM_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4000_DM_area/signalZPrime4000_DM_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime4000_DM_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4000_DM_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime4000_DM_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime4000_DM_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime4000_DM_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4500_DM_area/signalZPrime4500_DM_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime4500_DM_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4500_DM_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime4500_DM_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime4500_DM_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime4500_DM_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime5000_DM_area/signalZPrime5000_DM_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime5000_DM_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime5000_DM_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime5000_DM_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime5000_DM_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime5000_DM_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1000_1_area/signalZPrime1000_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1000_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1000_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime1000_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1000_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1000_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1200_1_area/signalZPrime1200_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1200_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1200_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime1200_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1200_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1200_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1400_1_area/signalZPrime1400_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1400_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1400_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime1400_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1400_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1400_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1600_1_area/signalZPrime1600_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1600_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1600_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime1600_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1600_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1600_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1800_1_area/signalZPrime1800_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1800_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1800_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime1800_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1800_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1800_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2000_1_area/signalZPrime2000_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime2000_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2000_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime2000_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime2000_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime2000_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2500_1_area/signalZPrime2500_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime2500_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2500_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime2500_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime2500_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime2500_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3000_1_area/signalZPrime3000_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime3000_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3000_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime3000_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime3000_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime3000_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3500_1_area/signalZPrime3500_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime3500_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3500_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime3500_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime3500_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime3500_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4000_1_area/signalZPrime4000_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime4000_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4000_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime4000_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime4000_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime4000_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4500_1_area/signalZPrime4500_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime4500_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4500_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime4500_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime4500_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime4500_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1000_1_area/signalZPrime1000_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1000_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1000_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime1000_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1000_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1000_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1200_1_area/signalZPrime1200_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1200_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1200_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime1200_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1200_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1200_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1400_1_area/signalZPrime1400_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1400_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1400_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime1400_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1400_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1400_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1600_1_area/signalZPrime1600_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1600_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1600_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime1600_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1600_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1600_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1800_1_area/signalZPrime1800_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1800_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1800_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime1800_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1800_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1800_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2000_1_area/signalZPrime2000_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime2000_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2000_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime2000_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime2000_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime2000_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2500_1_area/signalZPrime2500_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime2500_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2500_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime2500_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime2500_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime2500_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3000_1_area/signalZPrime3000_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime3000_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3000_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime3000_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime3000_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime3000_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3500_1_area/signalZPrime3500_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime3500_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3500_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime3500_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime3500_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime3500_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4000_1_area/signalZPrime4000_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime4000_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4000_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime4000_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime4000_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime4000_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4500_1_area/signalZPrime4500_1_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime4500_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4500_1_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime4500_1_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime4500_1_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime4500_1_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1000_10_area/signalZPrime1000_10_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1000_10_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1000_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime1000_10_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1000_10_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1000_10_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1200_10_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1200_10_area/signalZPrime1200_10_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1200_10_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1200_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1200_10_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1400_10_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1400_10_area/signalZPrime1400_10_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1400_10_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1400_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1400_10_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1800_10_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1800_10_area/signalZPrime1800_10_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1800_10_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1800_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1800_10_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2000_10_area/signalZPrime2000_10_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime2000_10_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2000_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime2000_10_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime2000_10_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime2000_10_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime2500_10_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2500_10_area/signalZPrime2500_10_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime2500_10_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2500_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime2500_10_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3000_10_area/signalZPrime3000_10_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime3000_10_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3000_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime3000_10_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime3000_10_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime3000_10_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime3500_10_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3500_10_area/signalZPrime3500_10_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime3500_10_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3500_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime3500_10_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4000_10_area/signalZPrime4000_10_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime4000_10_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4000_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime4000_10_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime4000_10_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime4000_10_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime4500_10_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4500_10_area/signalZPrime4500_10_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime4500_10_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4500_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime4500_10_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime5000_10_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime5000_10_area/signalZPrime5000_10_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime5000_10_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime5000_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime5000_10_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime6000_10_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime6000_10_area/signalZPrime6000_10_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime6000_10_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime6000_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime6000_10_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime7000_10_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime7000_10_area/signalZPrime7000_10_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime7000_10_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime7000_10_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime7000_10_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1000_30_area/signalZPrime1000_30_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1000_30_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1000_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime1000_30_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1000_30_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1000_30_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1200_30_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1200_30_area/signalZPrime1200_30_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1200_30_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1200_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1200_30_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1400_30_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1400_30_area/signalZPrime1400_30_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1400_30_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1400_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1400_30_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime1800_30_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1800_30_area/signalZPrime1800_30_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime1800_30_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime1800_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime1800_30_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2000_30_area/signalZPrime2000_30_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime2000_30_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2000_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime2000_30_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime2000_30_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime2000_30_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime2500_30_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2500_30_area/signalZPrime2500_30_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime2500_30_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime2500_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime2500_30_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3000_30_area/signalZPrime3000_30_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime3000_30_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3000_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime3000_30_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime3000_30_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime3000_30_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime3500_30_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3500_30_area/signalZPrime3500_30_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime3500_30_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime3500_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime3500_30_card.txt -n .Test
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4000_30_area/signalZPrime4000_30_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime4000_30_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4000_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/text2workspace.py", line 64, in <module>
+    MB.doModel(justCheckPhysicsModel=options.justCheckPhysicsModel)
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ModelTools.py", line 111, in doModel
+    if not justCheckPhysicsModel: self.doObservables()
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 70, in doObservables
+    self.prepareAllShapes();
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 352, in prepareAllShapes
+    shape = self.getShape(b,p); norm = 0;
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/python/HiggsAnalysis/CombinedLimit/ShapeTools.py", line 543, in getShape
+    raise RuntimeError, "Object %s in workspace %s in file %s does not exist or it's neither a data nor a pdf" % (oname, wname, finalNames[0])
+RuntimeError: Object 16_signalZPrime4000_30_cen0bPass_LOW in workspace w in file /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime4000_30_area/../base.root does not exist or it's neither a data nor a pdf
+Error when running the combination:
+	Failed to convert the input datacard from LandS to RooStats format. The lines above probably contain more information about the error.
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime4000_30_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime4500_30_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4500_30_area/signalZPrime4500_30_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime4500_30_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime4500_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime4500_30_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime5000_30_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime5000_30_area/signalZPrime5000_30_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime5000_30_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime5000_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime5000_30_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime6000_30_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime6000_30_area/signalZPrime6000_30_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime6000_30_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime6000_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime6000_30_card.txt -n .Test
+Traceback (most recent call last):
+  File "/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/bin/slc7_amd64_gcc700/combineCards.py", line 68, in <module>
+    file = open(fname, "r")
+IOError: [Errno 2] No such file or directory: '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_cen0b_0x1/signalZPrime7000_30_area/card.txt'
+combining data cards into /afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime7000_30_area/signalZPrime7000_30_card.txt
+combineTool.py -M AsymptoticLimits -d signalZPrime7000_30_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2016/ttbarfits_inclusive/signalZPrime7000_30_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+Dataset data_obs not found.
+No observed data 'data_obs' in the workspace. Cannot compute limit.
+
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalZPrime7000_30_card.txt -n .Test

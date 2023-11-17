@@ -1,0 +1,216 @@
+nohup: ignoring input
+combining data cards into /eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon1000_area/signalRSGluon1000_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon1000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon1000_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 6.8183
+Expected  2.5%: r < 1.7094
+Expected 16.0%: r < 2.3051
+Expected 50.0%: r < 3.2656
+Expected 84.0%: r < 4.6845
+Expected 97.5%: r < 6.4672
+
+Done in 6.02 min (cpu), 6.03 min (real)
+combining data cards into /eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon1500_area/signalRSGluon1500_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon1500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon1500_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0932
+Expected  2.5%: r < 0.1006
+Expected 16.0%: r < 0.1346
+Expected 50.0%: r < 0.1895
+Expected 84.0%: r < 0.2687
+Expected 97.5%: r < 0.3684
+
+Done in 6.48 min (cpu), 6.48 min (real)
+combining data cards into /eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon2000_area/signalRSGluon2000_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon2000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon2000_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0230
+Expected  2.5%: r < 0.0253
+Expected 16.0%: r < 0.0343
+Expected 50.0%: r < 0.0483
+Expected 84.0%: r < 0.0688
+Expected 97.5%: r < 0.0941
+
+Done in 7.08 min (cpu), 7.08 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon2000_card.txt -n .Test
+combining data cards into /eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon2500_area/signalRSGluon2500_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon2500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon2500_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0189
+Expected  2.5%: r < 0.0118
+Expected 16.0%: r < 0.0157
+Expected 50.0%: r < 0.0229
+Expected 84.0%: r < 0.0321
+Expected 97.5%: r < 0.0442
+
+Done in 7.12 min (cpu), 7.12 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon2500_card.txt -n .Test
+combining data cards into /eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon3000_area/signalRSGluon3000_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon3000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon3000_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0105
+Expected  2.5%: r < 0.0080
+Expected 16.0%: r < 0.0103
+Expected 50.0%: r < 0.0151
+Expected 84.0%: r < 0.0214
+Expected 97.5%: r < 0.0303
+
+Done in 7.05 min (cpu), 7.05 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon3000_card.txt -n .Test
+combining data cards into /eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon3500_area/signalRSGluon3500_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon3500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon3500_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0104
+Expected  2.5%: r < 0.0070
+Expected 16.0%: r < 0.0089
+Expected 50.0%: r < 0.0132
+Expected 84.0%: r < 0.0195
+Expected 97.5%: r < 0.0269
+
+Done in 6.94 min (cpu), 6.94 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon3500_card.txt -n .Test
+combining data cards into /eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon4000_area/signalRSGluon4000_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon4000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon4000_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0106
+Expected  2.5%: r < 0.0065
+Expected 16.0%: r < 0.0083
+Expected 50.0%: r < 0.0122
+Expected 84.0%: r < 0.0188
+Expected 97.5%: r < 0.0271
+
+Done in 6.64 min (cpu), 6.64 min (real)
+combining data cards into /eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon4500_area/signalRSGluon4500_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon4500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon4500_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0057
+Expected  2.5%: r < 0.0071
+Expected 16.0%: r < 0.0104
+Expected 50.0%: r < 0.0151
+Expected 84.0%: r < 0.0233
+Expected 97.5%: r < 0.0336
+
+Done in 7.04 min (cpu), 7.05 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon4500_card.txt -n .Test
+combining data cards into /eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon5000_area/signalRSGluon5000_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon5000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon5000_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0164
+Expected  2.5%: r < 0.0099
+Expected 16.0%: r < 0.0136
+Expected 50.0%: r < 0.0205
+Expected 84.0%: r < 0.0306
+Expected 97.5%: r < 0.0440
+
+Done in 6.61 min (cpu), 6.62 min (real)
+>> combine --saveWorkspace --cminDefaultMinimizerStrategy 0 -v 0 -M AsymptoticLimits -d signalRSGluon5000_card.txt -n .Test
+combining data cards into /eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon5500_area/signalRSGluon5500_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon5500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon5500_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0206
+Expected  2.5%: r < 0.0149
+Expected 16.0%: r < 0.0204
+Expected 50.0%: r < 0.0308
+Expected 84.0%: r < 0.0460
+Expected 97.5%: r < 0.0657
+
+Done in 7.48 min (cpu), 7.49 min (real)
+combining data cards into /eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon6000_area/signalRSGluon6000_card.txt
+combineTool.py -M AsymptoticLimits -d signalRSGluon6000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour=longlunch'
+/eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2018/ttbarfits_inclusive/signalRSGluon6000_area
+ <<< Combine >>> 
+>>> random number generator seed is 123456
+>>> method used is AsymptoticLimits
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+SimNLL created with 36 channels, 0 generic constraints, 8 fast gaussian constraints, 0 fast poisson constraints, 0 fast group constraints, 
+
+ -- AsymptoticLimits ( CLs ) --
+Observed Limit: r < 0.0259
+Expected  2.5%: r < 0.0192
+Expected 16.0%: r < 0.0268
+Expected 50.0%: r < 0.0396
+Expected 84.0%: r < 0.0594
+Expected 97.5%: r < 0.0846
+
+Done in 6.59 min (cpu), 6.60 min (real)

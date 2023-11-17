@@ -1,0 +1,79 @@
+2016 rsgluon
+
+---------DEBUG-----------
+x_mass: array('d', [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0])
+len x_mass: 11
+y_mclimit: array('d', [7.03125, 0.3798828125, 0.1005859375, 0.046875, 0.03369140625, 0.02978515625, 0.03076171875, 0.03564453125, 0.04833984375, 0.06982421875, 0.0947265625])
+Blinded
+expectedMassLimit 4.139
+expectedCrossLimit 0.03209713475
+Expected limit: 4.139 +0.264 -0.252 TeV
+saving limits/antitagMedium/limits_combine_rsgluon_20161023.pdf
+saving limits/antitagMedium/limits_combine_rsgluon_20161023.png
+
+
+2016 zprime 1%
+
+---------DEBUG-----------
+x_mass: array('d', [1.0, 2.0, 3.0, 4.0, 4.5])
+len x_mass: 5
+y_mclimit: array('d', [3.953125, 0.02197265625, 0.00537109375, 0.00341796875, 0.00341796875])
+Blinded
+expectedMassLimit 3.9575
+expectedCrossLimit 0.00348750506
+Expected limit: 3.9575 +0.1344 -2.079 TeV
+saving limits/antitagMedium/limits_combine_zprime1_20161023.pdf
+saving limits/antitagMedium/limits_combine_zprime1_20161023.png
+
+
+
+2016 zprime 10%
+
+---------DEBUG-----------
+x_mass: array('d', [1.0, 2.0, 3.0, 4.0])
+len x_mass: 4
+y_mclimit: array('d', [6.8125, 0.05419921875, 0.01513671875, 0.01123046875])
+Blinded
+expectedMassLimit 4.1866
+expectedCrossLimit 0.010184141665
+Expected limit: 4.1866 +0.0144 -0.0288 TeV
+saving limits/antitagMedium/limits_combine_zprime10_20161023.pdf
+saving limits/antitagMedium/limits_combine_zprime10_20161023.png
+
+
+zprime 30%
+
+---------DEBUG-----------
+x_mass: array('d', [1.0, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 6.0, 7.0])
+len x_mass: 10
+y_mclimit: array('d', [3.703125, 0.09423828125, 0.04541015625, 0.03271484375, 0.02783203125, 0.02783203125, 0.029296875, 0.03369140625, 0.05029296875, 0.06591796875])
+Blinded
+expectedMassLimit 5.9044
+expectedCrossLimit 0.0486793487
+Expected limit: 5.9044 +0.3672 -0.288 TeV
+saving limits/antitagMedium/limits_combine_zprime30_20161023.pdf
+saving limits/antitagMedium/limits_combine_zprime30_20161023.png
+
+
+
+
+
+2016 zprime DM
+
+---------DEBUG-----------
+x_mass: array('d', [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0])
+len x_mass: 9
+y_mclimit: array('d', [6.78125, 0.18603515625, 0.046875, 0.02001953125, 0.01220703125, 0.00927734375, 0.00927734375, 0.01025390625, 0.01416015625])
+Blinded
+expectedMassLimit 1.4808
+expectedCrossLimit 0.4281451875
+expectedMassLimit 2.8646
+expectedCrossLimit 0.014292118425
+Expected limit: 1.4808 +-0.0288 --0.0096 TeV
+saving limits/antitagMedium/limits_combine_zprimeDM_20161023.pdf
+saving limits/antitagMedium/limits_combine_zprimeDM_20161023.png
+
+
+
+
+

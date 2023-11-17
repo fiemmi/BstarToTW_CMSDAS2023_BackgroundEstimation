@@ -7,26 +7,18 @@
 	"HIST": "MttvsMt$region",
 	"HIST_UP": "MttvsMt$region$systup",
 	"HIST_DOWN": "MttvsMt$region$systdown",
-	"path": "/afs/cern.ch/user/m/mmorris/public/ttbarAllHad/twodalphabet/test",
+	"path": "/afs/cern.ch/user/m/mmorris/public/ttbarAllHad/twodalphabet/Run2_deepak8_medium_ht950_categories_unblind",
 	"SIGNAME": [
-                "signalRSGluon1000",
-                "signalRSGluon1500",
-                "signalRSGluon2000",
-                "signalRSGluon2500",
-                "signalRSGluon3000",
-                "signalRSGluon3500",
-                "signalRSGluon4000",
-                "signalRSGluon4500",
-                "signalRSGluon5000"
-               ]
+                "signalRSGluon2000"
+		]
     },
     "REGIONS": {
         "fwd2bPass": {
-            "PROCESSES": ["18_SIGNAME","18_TTbar"],
+            "PROCESSES": ["16_SIGNAME","16_TTbar"],
             "BINNING": "default"
             },
         "fwd2bFail": {
-                "PROCESSES": ["18_SIGNAME","18_TTbar"],
+                "PROCESSES": ["16_SIGNAME","16_TTbar"],
                 "BINNING": "default"
             }
     },
@@ -38,19 +30,19 @@
                 "TYPE": "DATA",
                 "TITLE": "Data",
                 "HELP": "since the data file is not called TTbarAllHaddata_obs.root, we make an alias to the real name - shown below",
-                "ALIAS": "18_Data",
+                "ALIAS": "16_Data",
                 "LOC": "path/FILE:HIST"
             },
-        "18_SIGNAME": {
-                "SYSTEMATICS":["lumi", "btag_unc", "pileup", "pdf", "jes", "jer", "btag"],
+        "16_SIGNAME": {
+                "SYSTEMATICS":["lumi", "btag_unc", "pileup", "pdf", "jes", "jer", "btag", "q2", "prefiring"],
                 "SCALE": 1.0, 
                 "COLOR": 1, 
                 "TYPE": "SIGNAL",
-                "TITLE": "g_{RS} (3 TeV)",
+                "TITLE": "g_{RS} (2 TeV)",
                 "LOC": "path/FILE:HIST"
             },
-            "18_TTbar": {
-                "SYSTEMATICS": ["lumi","ttbar_xsec", "btag_unc", "pileup", "pdf", "jes", "jer", "btag"],
+            "16_TTbar": {
+                "SYSTEMATICS": ["lumi","ttbar_xsec", "btag_unc", "pileup", "pdf", "jes", "jer", "btag", "q2", "prefiring"],
                 "SCALE": 1.0,
                 "COLOR": 2,
                 "TYPE": "BKG",
@@ -111,6 +103,22 @@
 	    "DOWN": "path/FILE:HIST_DOWN",
             "SCALE": 1.0,
 	    "SIGMA": 1.0
+        },
+        "q2": {
+	    "ALIAS": "Q2",
+            "CODE": 2,
+	    "UP": "path/FILE:HIST_UP",
+	    "DOWN": "path/FILE:HIST_DOWN",
+            "SCALE": 1.0,
+	    "SIGMA": 1.0
+        },
+        "prefiring": {
+	    "ALIAS": "PREFIRING",
+            "CODE": 2,
+	    "UP": "path/FILE:HIST_UP",
+	    "DOWN": "path/FILE:HIST_DOWN",
+            "SCALE": 1.0,
+	    "SIGMA": 1.0
         }
      },
     
@@ -126,7 +134,7 @@
 	    "Y": {
 		"NAME": "resmass",
 		"TITLE": "m_{t#bar{t}} [GeV]",
-		"BINS": [800, 1100, 1400, 1700, 2000, 2300, 2600, 2900, 3200, 3500, 3800, 4100, 4400, 4700, 5000]
+		"BINS": [800, 1100, 1400, 1700, 2000, 2300, 2600, 2900, 3200, 3500, 5000]
 	    }
 	}
     },
@@ -138,6 +146,6 @@
 	"plotTitles": false,
 	"plotTemplateComparisons": false,
 	"plotEvtsPerUnit": true,
-	"year": 2
+	"year": 16
     }
 }

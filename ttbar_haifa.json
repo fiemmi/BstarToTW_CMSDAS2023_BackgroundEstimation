@@ -1,0 +1,141 @@
+{
+    "NAME": "ttbar",
+    "GLOBAL": {
+	"FILE": "TTbarAllHad$process.root",
+	"FILE_UP": "TTbarAllHad$process_$syst_up.root",
+	"FILE_DOWN": "TTbarAllHad$process_$syst_down.root",
+	"HIST": "MttvsMt$region",
+	"HIST_UP": "MttvsMt$region$systup",
+	"HIST_DOWN": "MttvsMt$region$systdown",
+        "path": "/afs/cern.ch/work/h/hrejebsf/public/rootfiles/tighttoloose_2b",
+        "SIGNAME": [
+                "signalRSGluon2000"
+               ]
+
+    },
+    "REGIONS": {
+        "Pass": {
+            "PROCESSES": ["16_SIGNAME","16_TTbar"],
+            "BINNING": "default"
+            },
+        "Fail": {
+                "PROCESSES": ["16_SIGNAME","16_TTbar"],
+                "BINNING": "default"
+            }
+    },
+    "PROCESSES": {
+        "data_obs": {
+                "SYSTEMATICS": [],
+                "SCALE": 1.0,
+                "COLOR": 1,
+                "TYPE": "DATA",
+                "TITLE": "Data",
+                "HELP": "since the data file is not called TTbarAllHaddata_obs.root, we make an alias to the real name - shown below",
+                "ALIAS": "16_Data",
+                "LOC": "path/FILE:HIST"
+            },
+        "16_SIGNAME": {
+                "SYSTEMATICS":["lumi", "jes", "jer", "pileup", "pdf", "q2", "btag"],
+                "SCALE": 1.0, 
+                "COLOR": 1, 
+                "TYPE": "SIGNAL",
+                "TITLE": "g_{RS} (3 TeV)",
+                "LOC": "path/FILE:HIST"
+            },
+        "16_TTbar": {
+                "SYSTEMATICS": ["lumi","ttbar_xsec", "jes", "jer", "pileup", "pdf", "q2", "btag"],
+                "SCALE": 1.0,
+                "COLOR": 2,
+                "TYPE": "BKG",
+                "TITLE": "t#bar{t}",
+                "LOC": "path/FILE:HIST"
+            }
+        
+        },
+     "SYSTEMATICS": {
+        "lumi": {
+            "CODE": 0,
+            "VAL": 1.018
+        },
+        "ttbar_xsec": {
+            "CODE": 0,
+            "VAL": 1.20
+        },
+        "pileup": {
+	    "ALIAS": "PILEUP",
+            "CODE": 2,
+	    "UP": "path/FILE:HIST_UP",
+	    "DOWN": "path/FILE:HIST_DOWN",
+            "SCALE": 1.0,
+	    "SIGMA": 1.0
+        },
+        "pdf": {
+	    "ALIAS": "PDF",
+            "CODE": 2,
+	    "UP": "path/FILE:HIST_UP",
+	    "DOWN": "path/FILE:HIST_DOWN",
+            "SCALE": 1.0,
+	    "SIGMA": 1.0
+        },
+        "jes": {
+	    "ALIAS": "JES",
+            "CODE": 2,
+	    "UP": "path/FILE:HIST_UP",
+	    "DOWN": "path/FILE:HIST_DOWN",
+            "SCALE": 1.0,
+	    "SIGMA": 1.0
+        },
+        "jer": {
+	    "ALIAS": "JER",
+            "CODE": 2,
+	    "UP": "path/FILE:HIST_UP",
+	    "DOWN": "path/FILE:HIST_DOWN",
+            "SCALE": 1.0,
+	    "SIGMA": 1.0
+        },
+        "q2": {
+	    "ALIAS": "Q2",
+            "CODE": 2,
+	    "UP": "path/FILE:HIST_UP",
+	    "DOWN": "path/FILE:HIST_DOWN",
+            "SCALE": 1.0,
+	    "SIGMA": 1.0
+        },
+        "btag": {
+	    "ALIAS": "BTAG",
+            "CODE": 2,
+	    "UP": "path/FILE:HIST_UP",
+	    "DOWN": "path/FILE:HIST_DOWN",
+            "SCALE": 1.0,
+	    "SIGMA": 1.0
+        }
+     },
+    
+    "BINNING": {
+	"default": {
+	    "X": {
+		"NAME": "jetmass",
+		"TITLE": "m_{t} [GeV]",
+		"BINS":[ 25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300, 325, 350, 375, 400, 425, 475],
+		"SIGSTART": 125,
+		"SIGEND": 225
+	    },
+	    "Y": {
+		"NAME": "resmass",
+		"TITLE": "m_{t#bar{t}} [GeV]",
+                "BINS": [ 800, 1100, 1400, 1700, 2000, 2300, 2600, 2900, 3200, 3500, 3800, 4100, 4400, 4700, 5000, 5300, 5600, 5900, 6200, 6500]
+	    }
+	}
+    },
+    "OPTIONS": {
+	"blindedPlots": [],
+	"blindedFit": [],
+        "plotPrefitSigInFitB": true,
+	"plotUncerts": false,
+	"plotTitles": false,
+	"plotTemplateComparisons": false,
+	"plotEvtsPerUnit": true,
+	"year": 2
+    }
+}
+

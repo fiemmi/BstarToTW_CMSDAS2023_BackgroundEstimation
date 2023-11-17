@@ -69,10 +69,13 @@ params = '3x1'
 
 if '0b' in regionby:
     params = '0x1'
-elif '1b' in regionby:
-    params = '3x1'
-elif '2b' in regionby:
-    params = '3x1'
+elif 'fwd1b' in regionby:
+    params = '0x1'
+# elif '1b' in regionby:
+#     params = '3x1'
+# elif '2b' in regionby:
+#     params = '3x1'
+
     
     
 rmin = -1
@@ -87,10 +90,10 @@ extra='--robustFit=1'
 #     rmin = 15
 #     rmax = 50
     
-if 'cen0b' in regionby:
-    rmin = -5
-    rmax = -1
-#     extra='--robustHesse=1'
+# if 'cen0b' in regionby:
+#     rmin = -5
+#     rmax = -1
+# #     extra='--robustHesse=1'
 
 # for b*, the P/F regions are named MtwvMtPass and MtwvMtFail
 # so, just need to find and replace Pass/Fail depending on which region we want
@@ -191,10 +194,10 @@ def make_workspace():
         # We specify the name of the process, the region it lives in, and the object itself.
         # The process is assumed to be a background and colored yellow but this can be changed
         # with optional arguments.
-        twoD.AddAlphaObj('QCD',f,qcd_f,title='QCD')
+        twoD.AddAlphaObj('QCD',f,qcd_f,title='NTMJ')
 
         qcd_p = qcd_f.Multiply(fail_name.replace('Fail','Pass'), qcd_rpf)
-        twoD.AddAlphaObj('QCD', p, qcd_p, title='QCD')
+        twoD.AddAlphaObj('QCD', p, qcd_p, title='NTMJ')
 
     # save the workspace!
     twoD.Save()
@@ -271,13 +274,13 @@ def perform_limit(signal):
         twoD.MakeCard(subset, signame+'_area')
         # Run the blinded limit with our dictionary of TF parameters
         # NOTE: we are running without blinding (blinding seems to cause an issue with the limit plotting script...)
-        twoD.Limit(
-            subtag=signame+'_area',
-            blindData=False,
-            verbosity=0,
-            setParams=params_to_set,
-            condor=False
-        )
+#         twoD.Limit(
+#             subtag=signame+'_area',
+#             blindData=False,
+#             verbosity=0,
+#             setParams=params_to_set,
+#             condor=False
+#         )
         
         
 def GoF(signal, tf='', nToys=500, condor=False):

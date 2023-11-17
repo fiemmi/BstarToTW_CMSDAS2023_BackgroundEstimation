@@ -1,0 +1,17 @@
+2016
+
+rsgluon 
+
+---------DEBUG-----------
+x_mass: array('d', [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0])
+len x_mass: 9
+y_mclimit: array('d', [16.75, 0.72265625, 0.22265625, 0.12109375, 0.091796875, 0.08203125, 0.08642578125, 0.09619140625, 0.11181640625])
+Blinded
+expectedMassLimit 3.4344
+expectedCrossLimit 0.0831705165
+Expected limit: 3.4344 +0.24 -2.7744 TeV
+saving limits/pdf/limits_combine_rsgluon_2016.pdf
+saving limits/png/limits_combine_rsgluon_2016.png
+
+
+

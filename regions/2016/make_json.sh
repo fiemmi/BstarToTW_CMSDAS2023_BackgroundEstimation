@@ -20,10 +20,10 @@ sed -i s/cen0b/fwd2b/g ttbar_fwd2b.json
 cp *.json ../2017
 cp *.json ../2018
 
-cd ../2017
-sed -i s/16/17/g *json
+#cd ../2017
+#sed -i s/16/17/g *json
 
-cd ../2018
-sed -i s/16/18/g *json
+#cd ../2018
+#sed -i s/16/18/g *json
 
-cd ../2016
+#cd ../2016

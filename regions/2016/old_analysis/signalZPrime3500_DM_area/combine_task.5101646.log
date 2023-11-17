@@ -1,0 +1,42 @@
+000 (5101646.000.000) 07/15 17:19:09 Job submitted from host: <188.185.71.83:9618?addrs=188.185.71.83-9618+[2001-1458-d00-7--100-34d]-9618&alias=bigbird18.cern.ch&noUDP&sock=schedd_2070_6d22>
+...
+040 (5101646.000.000) 07/15 17:20:12 Started transferring input files
+	Transferring to host: <128.142.61.15:9618?addrs=128.142.61.15-9618+[2001-1458-301-23--100-e]-9618&alias=b7s06p7712.cern.ch&noUDP&sock=slot1_9_6563_fa24_40467>
+...
+040 (5101646.000.000) 07/15 17:20:12 Finished transferring input files
+...
+001 (5101646.000.000) 07/15 17:20:13 Job executing on host: <128.142.61.15:9618?addrs=128.142.61.15-9618+[2001-1458-301-23--100-e]-9618&alias=b7s06p7712.cern.ch&noUDP&sock=startd_4312_4077>
+...
+006 (5101646.000.000) 07/15 17:20:22 Image size of job updated: 98548
+	46  -  MemoryUsage of job (MB)
+	46556  -  ResidentSetSize of job (KB)
+...
+006 (5101646.000.000) 07/15 17:25:23 Image size of job updated: 1362120
+	329  -  MemoryUsage of job (MB)
+	336764  -  ResidentSetSize of job (KB)
+...
+006 (5101646.000.000) 07/15 17:30:23 Image size of job updated: 1362120
+	496  -  MemoryUsage of job (MB)
+	506952  -  ResidentSetSize of job (KB)
+...
+040 (5101646.000.000) 07/15 17:33:31 Started transferring output files
+...
+040 (5101646.000.000) 07/15 17:33:31 Finished transferring output files
+...
+005 (5101646.000.000) 07/15 17:33:31 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:12:30, Sys 0 00:00:06  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:12:30, Sys 0 00:00:06  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	757  -  Run Bytes Sent By Job
+	535  -  Run Bytes Received By Job
+	757  -  Total Bytes Sent By Job
+	535  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :     1.00        1         1 
+	   Disk (KB)            :    25           1   1191152 
+	   Memory (MB)          :   496        2000      2000 
+
+	Job terminated of its own accord at 2023-07-15T15:33:31Z.
+...

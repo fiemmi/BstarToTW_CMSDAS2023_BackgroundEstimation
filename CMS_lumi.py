@@ -176,7 +176,7 @@ def CMS_lumi(pad,  iPeriod=19,  iPosX=11, sim=False ):
                 latex.SetTextAlign(align_)
                 latex.SetTextSize(extraTextSize*t)
                 if not sim: latex.DrawLatex(posX_, posY_- relExtraDY*cmsTextSize*t, extraText)
-                else: latex.DrawLatex(posX_, posY_- relExtraDY*cmsTextSize*t, extraText + ' simulation')
+                else: latex.DrawLatex(posX_, posY_- relExtraDY*cmsTextSize*t, extraText + '\nsimulation')
     elif( writeExtraText ):
         if( iPosX==0):
             posX_ =   l +  relPosX*(1-l-r)

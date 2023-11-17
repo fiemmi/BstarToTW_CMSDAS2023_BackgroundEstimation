@@ -1,92 +1,130 @@
 #!/bin/sh
 
-dir=/afs/cern.ch/user/m/mmorris/BackgroundEstimation/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2017
+dir=/eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/regions/2017
 savedir=ttbarfits_inclusive
 tag0=_0x1
 tag=_3x1
 
 
-mkdir $dir/$savedir
-cp -rp ttbarfits_cen2b$tag/signal* $dir/$savedir
-cp ttbarfits_cen2b$tag/*root $dir/$savedir
+job=$1
+copy="copy"
+
+if [ "$job" = "copy" ]; then
+
+    mkdir $dir/$savedir
+    cp -rp ttbarfits_cen2b$tag/signal* $dir/$savedir
+    cp ttbarfits_cen2b$tag/*root $dir/$savedir
+    
+    
+elif [ "$job" = "rsgluon" ]; then
+
+    # RS Gluon # 
+
+    for MASS in 1000 1500 2000 2500 3000 3500 4000 4500 5000 5500 6000
+    do
+
+        combineCards.py cen0b=$dir/ttbarfits_cen0b$tag0/signalRSGluon${MASS}_area/card.txt fwd0b=$dir/ttbarfits_fwd0b$tag0/signalRSGluon${MASS}_area/card.txt cen1b=$dir/ttbarfits_cen1b$tag/signalRSGluon${MASS}_area/card.txt fwd1b=$dir/ttbarfits_fwd1b$tag/signalRSGluon${MASS}_area/card.txt cen2b=$dir/ttbarfits_cen2b$tag/signalRSGluon${MASS}_area/card.txt fwd2b=$dir/ttbarfits_fwd2b$tag/signalRSGluon${MASS}_area/card.txt > $dir/$savedir/signalRSGluon${MASS}_area/signalRSGluon${MASS}_card.txt
+
+        echo 'combining data cards into '$dir'/'$savedir'/signalRSGluon'${MASS}'_area/signalRSGluon'${MASS}'_card.txt'
+
+
+        echo "combineTool.py -M AsymptoticLimits -d signalRSGluon${MASS}_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour="longlunch"'"
+        cd $dir/$savedir/signalRSGluon${MASS}_area
+        pwd
+#         combineTool.py -M AsymptoticLimits -d signalRSGluon${MASS}_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour="longlunch"'
+        combineTool.py -M AsymptoticLimits -d signalRSGluon${MASS}_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0
+
+    done
+    
+
+elif [ "$job" = "zprimedm" ]; then
+
+    # ZPrime DM # 
+
+    for MASS in 1000 1500 2000 2500 3000 3500 4000 4500 5000
+    do
+
+        combineCards.py cen0b=$dir/ttbarfits_cen0b$tag0/signalZPrime${MASS}_DM_area/card.txt fwd0b=$dir/ttbarfits_fwd0b$tag0/signalZPrime${MASS}_DM_area/card.txt cen1b=$dir/ttbarfits_cen1b$tag/signalZPrime${MASS}_DM_area/card.txt fwd1b=$dir/ttbarfits_fwd1b$tag/signalZPrime${MASS}_DM_area/card.txt cen2b=$dir/ttbarfits_cen2b$tag/signalZPrime${MASS}_DM_area/card.txt fwd2b=$dir/ttbarfits_fwd2b$tag/signalZPrime${MASS}_DM_area/card.txt > $dir/$savedir/signalZPrime${MASS}_DM_area/signalZPrime${MASS}_DM_card.txt
+
+        echo 'combining data cards into '$dir'/'$savedir'/signalZPrime'${MASS}'_DM_area/signalZPrime'${MASS}'_DM_card.txt'
+
+
+        echo "combineTool.py -M AsymptoticLimits -d signalZPrime${MASS}_DM_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour="longlunch"'"
+        cd $dir/$savedir/signalZPrime${MASS}_DM_area
+        pwd
+#         combineTool.py -M AsymptoticLimits -d signalZPrime${MASS}_DM_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour="longlunch"'
+        combineTool.py -M AsymptoticLimits -d signalZPrime${MASS}_DM_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0
+
+    done
+    
+    
+    
+elif [ "$job" = "zprime1" ]; then
+
+    # ZPrime 1% #
+
+    for MASS in 1000 1200 1400 1600 1800 2000 2500 3000 3500 4000 4500
+    do
+
+        combineCards.py cen0b=$dir/ttbarfits_cen0b$tag0/signalZPrime${MASS}_1_area/card.txt fwd0b=$dir/ttbarfits_fwd0b$tag0/signalZPrime${MASS}_1_area/card.txt cen1b=$dir/ttbarfits_cen1b$tag/signalZPrime${MASS}_1_area/card.txt fwd1b=$dir/ttbarfits_fwd1b$tag/signalZPrime${MASS}_1_area/card.txt cen2b=$dir/ttbarfits_cen2b$tag/signalZPrime${MASS}_1_area/card.txt fwd2b=$dir/ttbarfits_fwd2b$tag/signalZPrime${MASS}_1_area/card.txt > $dir/$savedir/signalZPrime${MASS}_1_area/signalZPrime${MASS}_1_card.txt
+
+        echo 'combining data cards into '$dir'/'$savedir'/signalZPrime'${MASS}'_1_area/signalZPrime'${MASS}'_1_card.txt'
+
+
+        echo "combineTool.py -M AsymptoticLimits -d signalZPrime${MASS}_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour="longlunch"'"
+        cd $dir/$savedir/signalZPrime${MASS}_1_area
+        pwd
+#         combineTool.py -M AsymptoticLimits -d signalZPrime${MASS}_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour="longlunch"'
+        combineTool.py -M AsymptoticLimits -d signalZPrime${MASS}_1_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0
+
+    done
 
 
 
-combineCards.py Name1=$dir/ttbarfits_cen0b$tag0/signalRSGluon1000_area/card.txt Name2=$dir/ttbarfits_fwd0b$tag0/signalRSGluon1000_area/card.txt Name3=$dir/ttbarfits_cen1b$tag/signalRSGluon1000_area/card.txt Name4=$dir/ttbarfits_fwd1b$tag/signalRSGluon1000_area/card.txt Name5=$dir/ttbarfits_cen2b$tag/signalRSGluon1000_area/card.txt Name6=$dir/ttbarfits_fwd2b$tag/signalRSGluon1000_area/card.txt > $dir/$savedir/signalRSGluon1000_area/signalRSGluon1000_card.txt
-
-echo 'combining data cards into '$dir'/'$savedir'/signalRSGluon1000_area/signalRSGluon1000_card.txt'
-
-combineCards.py Name1=$dir/ttbarfits_cen0b$tag0/signalRSGluon1500_area/card.txt Name2=$dir/ttbarfits_fwd0b$tag0/signalRSGluon1500_area/card.txt Name3=$dir/ttbarfits_cen1b$tag/signalRSGluon1500_area/card.txt Name4=$dir/ttbarfits_fwd1b$tag/signalRSGluon1500_area/card.txt Name5=$dir/ttbarfits_cen2b$tag/signalRSGluon1500_area/card.txt Name6=$dir/ttbarfits_fwd2b$tag/signalRSGluon1500_area/card.txt > $dir/$savedir/signalRSGluon1500_area/signalRSGluon1500_card.txt
-
-echo 'combining data cards into '$dir'/'$savedir'/signalRSGluon1500_area/signalRSGluon1500_card.txt'
-
-combineCards.py Name1=$dir/ttbarfits_cen0b$tag0/signalRSGluon2000_area/card.txt Name2=$dir/ttbarfits_fwd0b$tag0/signalRSGluon2000_area/card.txt Name3=$dir/ttbarfits_cen1b$tag/signalRSGluon2000_area/card.txt Name4=$dir/ttbarfits_fwd1b$tag/signalRSGluon2000_area/card.txt Name5=$dir/ttbarfits_cen2b$tag/signalRSGluon2000_area/card.txt Name6=$dir/ttbarfits_fwd2b$tag/signalRSGluon2000_area/card.txt > $dir/$savedir/signalRSGluon2000_area/signalRSGluon2000_card.txt
-
-echo 'combining data cards into '$dir'/'$savedir'/signalRSGluon2000_area/signalRSGluon2000_card.txt'
-
-combineCards.py Name1=$dir/ttbarfits_cen0b$tag0/signalRSGluon2500_area/card.txt Name2=$dir/ttbarfits_fwd0b$tag0/signalRSGluon2500_area/card.txt Name3=$dir/ttbarfits_cen1b$tag/signalRSGluon2500_area/card.txt Name4=$dir/ttbarfits_fwd1b$tag/signalRSGluon2500_area/card.txt Name5=$dir/ttbarfits_cen2b$tag/signalRSGluon2500_area/card.txt Name6=$dir/ttbarfits_fwd2b$tag/signalRSGluon2500_area/card.txt > $dir/$savedir/signalRSGluon2500_area/signalRSGluon2500_card.txt
-
-echo 'combining data cards into '$dir'/'$savedir'/signalRSGluon2500_area/signalRSGluon2500_card.txt'
-
-combineCards.py Name1=$dir/ttbarfits_cen0b$tag0/signalRSGluon3000_area/card.txt Name2=$dir/ttbarfits_fwd0b$tag0/signalRSGluon3000_area/card.txt Name3=$dir/ttbarfits_cen1b$tag/signalRSGluon3000_area/card.txt Name4=$dir/ttbarfits_fwd1b$tag/signalRSGluon3000_area/card.txt Name5=$dir/ttbarfits_cen2b$tag/signalRSGluon3000_area/card.txt Name6=$dir/ttbarfits_fwd2b$tag/signalRSGluon3000_area/card.txt > $dir/$savedir/signalRSGluon3000_area/signalRSGluon3000_card.txt
-
-echo 'combining data cards into '$dir'/'$savedir'/signalRSGluon3000_area/signalRSGluon3000_card.txt'
-
-combineCards.py Name1=$dir/ttbarfits_cen0b$tag0/signalRSGluon3500_area/card.txt Name2=$dir/ttbarfits_fwd0b$tag0/signalRSGluon3500_area/card.txt Name3=$dir/ttbarfits_cen1b$tag/signalRSGluon3500_area/card.txt Name4=$dir/ttbarfits_fwd1b$tag/signalRSGluon3500_area/card.txt Name5=$dir/ttbarfits_cen2b$tag/signalRSGluon3500_area/card.txt Name6=$dir/ttbarfits_fwd2b$tag/signalRSGluon3500_area/card.txt > $dir/$savedir/signalRSGluon3500_area/signalRSGluon3500_card.txt
-
-echo 'combining data cards into '$dir'/'$savedir'/signalRSGluon3500_area/signalRSGluon3500_card.txt'
-
-combineCards.py Name1=$dir/ttbarfits_cen0b$tag0/signalRSGluon4000_area/card.txt Name2=$dir/ttbarfits_fwd0b$tag0/signalRSGluon4000_area/card.txt Name3=$dir/ttbarfits_cen1b$tag/signalRSGluon4000_area/card.txt Name4=$dir/ttbarfits_fwd1b$tag/signalRSGluon4000_area/card.txt Name5=$dir/ttbarfits_cen2b$tag/signalRSGluon4000_area/card.txt Name6=$dir/ttbarfits_fwd2b$tag/signalRSGluon4000_area/card.txt > $dir/$savedir/signalRSGluon4000_area/signalRSGluon4000_card.txt
-
-echo 'combining data cards into '$dir'/'$savedir'/signalRSGluon4000_area/signalRSGluon4000_card.txt'
-
-combineCards.py Name1=$dir/ttbarfits_cen0b$tag0/signalRSGluon4500_area/card.txt Name2=$dir/ttbarfits_fwd0b$tag0/signalRSGluon4500_area/card.txt Name3=$dir/ttbarfits_cen1b$tag/signalRSGluon4500_area/card.txt Name4=$dir/ttbarfits_fwd1b$tag/signalRSGluon4500_area/card.txt Name5=$dir/ttbarfits_cen2b$tag/signalRSGluon4500_area/card.txt Name6=$dir/ttbarfits_fwd2b$tag/signalRSGluon4500_area/card.txt > $dir/$savedir/signalRSGluon4500_area/signalRSGluon4500_card.txt
-
-echo 'combining data cards into '$dir'/'$savedir'/signalRSGluon4500_area/signalRSGluon4500_card.txt'
-
-combineCards.py Name1=$dir/ttbarfits_cen0b$tag0/signalRSGluon5000_area/card.txt Name2=$dir/ttbarfits_fwd0b$tag0/signalRSGluon5000_area/card.txt Name3=$dir/ttbarfits_cen1b$tag/signalRSGluon5000_area/card.txt Name4=$dir/ttbarfits_fwd1b$tag/signalRSGluon5000_area/card.txt Name5=$dir/ttbarfits_cen2b$tag/signalRSGluon5000_area/card.txt Name6=$dir/ttbarfits_fwd2b$tag/signalRSGluon5000_area/card.txt > $dir/$savedir/signalRSGluon5000_area/signalRSGluon5000_card.txt
-
-echo 'combining data cards into '$dir'/'$savedir'/signalRSGluon5000_area/signalRSGluon5000_card.txt'
+elif [ "$job" = "zprime10" ]; then
 
 
-echo ''
-echo 'calculating limits'
-echo ''
+    # ZPrime 10 % #
+
+    for MASS in 1000 1200 1400 1800 2000 2500 3000 3500 4000 4500 5000 6000 7000
+    do
+
+        combineCards.py cen0b=$dir/ttbarfits_cen0b$tag0/signalZPrime${MASS}_10_area/card.txt fwd0b=$dir/ttbarfits_fwd0b$tag0/signalZPrime${MASS}_10_area/card.txt cen1b=$dir/ttbarfits_cen1b$tag/signalZPrime${MASS}_10_area/card.txt fwd1b=$dir/ttbarfits_fwd1b$tag/signalZPrime${MASS}_10_area/card.txt cen2b=$dir/ttbarfits_cen2b$tag/signalZPrime${MASS}_10_area/card.txt fwd2b=$dir/ttbarfits_fwd2b$tag/signalZPrime${MASS}_10_area/card.txt > $dir/$savedir/signalZPrime${MASS}_10_area/signalZPrime${MASS}_10_card.txt
+
+        echo 'combining data cards into '$dir'/'$savedir'/signalZPrime'${MASS}'_10_area/signalZPrime'${MASS}'_10_card.txt'
 
 
-echo "combineTool.py -M AsymptoticLimits -d signalRSGluon1000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor"
-cd /$dir/$savedir/signalRSGluon1000_area
-pwd
-combineTool.py -M AsymptoticLimits -d signalRSGluon1000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor
-echo "combineTool.py -M AsymptoticLimits -d signalRSGluon1500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor"
-cd /$dir/$savedir/signalRSGluon1500_area
-pwd
-combineTool.py -M AsymptoticLimits -d signalRSGluon1500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor
-echo "combineTool.py -M AsymptoticLimits -d signalRSGluon2000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor"
-cd /$dir/$savedir/signalRSGluon2000_area
-pwd
-combineTool.py -M AsymptoticLimits -d signalRSGluon2000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor
-echo "combineTool.py -M AsymptoticLimits -d signalRSGluon2500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor"
-cd /$dir/$savedir/signalRSGluon2500_area
-pwd
-combineTool.py -M AsymptoticLimits -d signalRSGluon2500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor
-echo "combineTool.py -M AsymptoticLimits -d signalRSGluon3000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor"
-cd /$dir/$savedir/signalRSGluon3000_area
-pwd
-combineTool.py -M AsymptoticLimits -d signalRSGluon3000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor
-echo "combineTool.py -M AsymptoticLimits -d signalRSGluon3500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor"
-cd /$dir/$savedir/signalRSGluon3500_area
-pwd
-combineTool.py -M AsymptoticLimits -d signalRSGluon3500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor
-echo "combineTool.py -M AsymptoticLimits -d signalRSGluon4000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor"
-cd /$dir/$savedir/signalRSGluon4000_area
-pwd
-combineTool.py -M AsymptoticLimits -d signalRSGluon4000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor
-echo "combineTool.py -M AsymptoticLimits -d signalRSGluon4500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor"
-cd /$dir/$savedir/signalRSGluon4500_area
-pwd
-combineTool.py -M AsymptoticLimits -d signalRSGluon4500_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor
-echo "combineTool.py -M AsymptoticLimits -d signalRSGluon5000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor"
-cd /$dir/$savedir/signalRSGluon5000_area
-pwd
-combineTool.py -M AsymptoticLimits -d signalRSGluon5000_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor
+        echo "combineTool.py -M AsymptoticLimits -d signalZPrime${MASS}_10_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour="longlunch"'"
+        cd $dir/$savedir/signalZPrime${MASS}_10_area
+        pwd
+#         combineTool.py -M AsymptoticLimits -d signalZPrime${MASS}_10_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour="longlunch"'
+        combineTool.py -M AsymptoticLimits -d signalZPrime${MASS}_10_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0
+
+    done
+
+
+elif [ "$job" = "zprime30" ]; then
+
+
+# ZPrime 30% # 
+
+
+    for MASS in 1000 1200 1400 1800 2000 2500 3000 3500 4000 4500 5000 6000 7000
+    do
+
+        combineCards.py cen0b=$dir/ttbarfits_cen0b$tag0/signalZPrime${MASS}_30_area/card.txt fwd0b=$dir/ttbarfits_fwd0b$tag0/signalZPrime${MASS}_30_area/card.txt cen1b=$dir/ttbarfits_cen1b$tag/signalZPrime${MASS}_30_area/card.txt fwd1b=$dir/ttbarfits_fwd1b$tag/signalZPrime${MASS}_30_area/card.txt cen2b=$dir/ttbarfits_cen2b$tag/signalZPrime${MASS}_30_area/card.txt fwd2b=$dir/ttbarfits_fwd2b$tag/signalZPrime${MASS}_30_area/card.txt > $dir/$savedir/signalZPrime${MASS}_30_area/signalZPrime${MASS}_30_card.txt
+
+        echo 'combining data cards into '$dir'/'$savedir'/signalZPrime'${MASS}'_30_area/signalZPrime'${MASS}'_30_card.txt'
+
+
+        echo "combineTool.py -M AsymptoticLimits -d signalZPrime${MASS}_30_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour="longlunch"'"
+        cd $dir/$savedir/signalZPrime${MASS}_30_area
+        pwd
+#         combineTool.py -M AsymptoticLimits -d signalZPrime${MASS}_30_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0 --job-mode condor --sub-opts='+JobFlavour="longlunch"'
+        combineTool.py -M AsymptoticLimits -d signalZPrime${MASS}_30_card.txt --saveWorkspace --cminDefaultMinimizerStrategy 0   -v 0
+
+    done
+    
+
+fi
+

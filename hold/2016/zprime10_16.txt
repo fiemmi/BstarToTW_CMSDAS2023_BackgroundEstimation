@@ -1,0 +1,4 @@
+ttbarfits16_3x1/signalZPrime1000_10_area, ttbarfits16_3x1/signalZPrime2000_10_area, ttbarfits16_3x1/signalZPrime3000_10_area, ttbarfits16_3x1/signalZPrime4000_10_area
+1000, 2000, 3000, 4000
+44.853, 2.262, 0.273, 0.0516
+0.03622, 0.001895, 0.0002112, 0.00003889
