@@ -144,7 +144,7 @@ run the `python ttbar.py` command for all 6 regions:
 cd regions/2016
 python ttbar.py cen0b
 python ttbar.py cen1b
-python ttbar.py cenbb
+python ttbar.py cen2b
 python ttbar.py fwd0b
 python ttbar.py fwd1b
 python ttbar.py fwd2b
@@ -163,14 +163,11 @@ In the ttbarfits directory, data cards are saved in the signal{XXXXX} directorie
 ./combine_cards.sh
 ```
 
-The combineTool.py jobsa are submitted to condor, and when the jobs are completed the combined data cards and asysmptotic root files can be found in the new directory `regions/2016/ttbarfits_inclusive`
+The combineTool.py jobs are submitted to condor, and when the jobs are completed the combined data cards and asymptotic root files can be found in the new directory `regions/2016/ttbarfits_inclusive`
 
 In order to plot the limit, run the `limits.ipynb` notebook.
 
 Repeat these steps for 2017 and 2018 in `regions/2017` and `regions/2018`
-
-
-
 
 
 The json files for the inclusive histograms are located in `inclusive/`
