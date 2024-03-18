@@ -19,7 +19,7 @@ else:
     dname = ''
 
     
-params = '2x1'
+params = '1x0'
 
 # if 'fwdb' in regionby:
 #     params = '0x1'

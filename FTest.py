@@ -37,15 +37,30 @@ def _gof_for_FTest(twoD, subtag, card_or_w='card.txt'):
         gof_data_cmd = ' '.join(gof_data_cmd)
         execute_cmd(gof_data_cmd)
 
-def FTest(poly1, poly2):
+def FTest(poly1, poly2, directory, regionby):
     '''
     Perform an F-test to compare the goodness-of-fit between two transfer function parameterizations using existing working areas
     Arguments:
 	poly1 (str): e.g. '0x0', '1x1', ...
 	poly2 (str): e.g. '0x0', '1x1', ...
     '''
-    area1 = 'ttbarfits_{}'.format(poly1)
-    area2 = 'ttbarfits_{}'.format(poly2)
+    area1 = directory+'ttbarfits_'+regionby+'_ftest_{}'.format(poly1)
+    area2 = directory+'ttbarfits_'+regionby+'_ftest_{}'.format(poly2)
+    
+    nParams_dict = {
+        '0x0':1,
+        '0x1':2,
+        '1x0':2,
+        '1x1':3,
+        '2x1':4,
+        '1x2':4,
+        '2x2':5,
+        '3x1':5,
+        '1x3':5,
+        '2x3':6,
+        '3x2':6,
+        '3x3':7,
+    }
     
     print('getting file {}/runConfig.json'.format(area1))
     
@@ -63,6 +78,7 @@ def FTest(poly1, poly2):
     
     rpfSet1 = params1[params1["name"].str.contains("rratio")]
     nRpfs1  = len(rpfSet1.index)
+    nRpfs1 = 1
     _gof_for_FTest(twoD1, 'ttbar-RSGluon2000_area', card_or_w='card.txt')
     gofFile1 = area1+'/ttbar-RSGluon2000_area/higgsCombine_gof_data.GoodnessOfFit.mH120.root'
 
@@ -70,11 +86,13 @@ def FTest(poly1, poly2):
     params2 = twoD2.ledger.select(_select_signal, 'signalRSGluon2000', '').alphaParams
     rpfSet2 = params2[params2["name"].str.contains("rratio")]
     nRpfs2  = len(rpfSet2.index)
+    nRpfs2 = 2
+
     _gof_for_FTest(twoD2, 'ttbar-RSGluon2000_area', card_or_w='card.txt')
     gofFile2 = area2+'/ttbar-RSGluon2000_area/higgsCombine_gof_data.GoodnessOfFit.mH120.root'
 
     base_fstat = FstatCalc(gofFile1,gofFile2,nRpfs1,nRpfs2,nBins)
-    print(base_fstat)
+    print 'base_fstat', base_fstat
 
     # Now define a sub function for plotting
     def plot_FTest(base_fstat,nRpfs1,nRpfs2,nBins):
@@ -90,6 +108,8 @@ def FTest(poly1, poly2):
         fdist.SetParameter(0,1)
         fdist.SetParameter(1,ftest_p2-ftest_p1)
         fdist.SetParameter(2,ftest_nbins-ftest_p2)
+        
+        print(ftest_nbins, ftest_p1, ftest_p2)
 
         pval = fdist.Integral(0.0,base_fstat[0])
         print 'P-value: %s'%pval
@@ -140,11 +160,62 @@ def FTest(poly1, poly2):
         latex.SetTextFont(42)
         latex.SetTextFont(52)
         latex.SetTextSize(0.045)
-        c.SaveAs('./ftest_{0}_vs_{1}.png'.format(poly1,poly2))
+        c.SaveAs('./ftests/ftest_'+regionby+'_{0}_vs_{1}_2018.png'.format(poly1,poly2))
 #         c.SaveAs('./ftest_{0}_vs_{1}_notoys.png'.format(poly1,poly2))
 
 
     plot_FTest(base_fstat,nRpfs1,nRpfs2,nBins)
 
 if __name__=="__main__":
-    FTest('1x0','3x2')
+    directory = '/eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/restarting_10172023/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/tight_rebinned/2018/'
+    
+    FTest('0x0','1x0', directory, 'cen')
+    FTest('0x0','1x0', directory, 'fwd')
+    
+    FTest('0x0','0x1', directory, 'cen')
+    FTest('0x0','0x1', directory, 'fwd')
+    
+    FTest('1x0','1x1', directory, 'cen')
+    FTest('1x0','1x1', directory, 'fwd')
+    
+    FTest('0x1','1x1', directory, 'cen')
+    FTest('0x1','1x1', directory, 'fwd')
+        
+    FTest('1x1','2x1', directory, 'cen')
+    FTest('1x1','2x1', directory, 'fwd')
+    
+    FTest('1x1','1x2', directory, 'cen')
+    FTest('1x1','1x2', directory, 'fwd')
+    
+    FTest('1x1','3x1', directory, 'cen')
+    FTest('1x1','3x1', directory, 'fwd')
+    
+    FTest('2x1','3x1', directory, 'cen')
+    FTest('2x1','3x1', directory, 'fwd')
+    
+    FTest('2x2','3x1', directory, 'cen')
+    FTest('2x2','3x1', directory, 'fwd')
+    
+    FTest('1x1','2x2', directory, 'cen')
+    FTest('1x1','2x2', directory, 'fwd')
+    
+    FTest('1x2','2x2', directory, 'cen')
+    FTest('1x2','2x2', directory, 'fwd')
+    
+    FTest('2x1','2x2', directory, 'cen')
+    FTest('2x1','2x2', directory, 'fwd')
+
+    FTest('2x2','3x1', directory, 'cen')
+    FTest('2x2','3x1', directory, 'fwd')
+    
+    FTest('3x1','2x2', directory, 'cen')
+    FTest('3x1','2x2', directory, 'fwd')
+    
+    FTest('0x0','1x1', directory, 'cen')
+    FTest('0x0','1x1', directory, 'fwd')
+    
+    
+    
+    
+    
+

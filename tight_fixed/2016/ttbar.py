@@ -19,7 +19,15 @@ else:
     dname = ''
 
     
-params = '2x1'
+params = '3x1'
+
+
+# if regionby=='fwd' or regionby=='binc':
+#     print('changing params to 3x1')
+#     params = '3x1'
+# elif regionby=='cen':
+#     params = '1x0'
+
 
 # if 'fwdb' in regionby:
 #     params = '0x1'
@@ -62,6 +70,10 @@ _rpf_options = {
     '1x2': {
         'form': '0.1*(@0+@1*x)*(1+@2*y+@3*y*y)',
         'constraints': _generate_constraints(4)
+    },
+    '1x3': {
+        'form': '0.1*(@0+@1*x)*(1+@3*y+@3*y*y+@4*y*y*y)',
+        'constraints': _generate_constraints(5)
     },
     '2x1': {
         'form': '0.1*(@0+@1*x+@2*x**2)*(1+@3*y)',
@@ -308,18 +320,18 @@ def GoF(signal, tf='', nToys=500, condor=False):
     distribution obtained from 500 toys (by default).
     '''
     # Load an existing workspace for a given TF parameterization (e.g., 'tWfits_1x1')
-    fitDir = 'ttbarfits16_3x1{}'.format('_'+tf if tf != '' else '')
+    fitDir = savedirname
     twoD = TwoDAlphabet(fitDir, '{}/runConfig.json'.format(fitDir), loadPrevious=True)
     # Creates a Combine card if not already existing (it should exist if you've already fitted this workspace)
-    if not os.path.exists(twoD.tag+'/'+'RSGluon-{}_area/card.txt'.format(signal)):
-        print('{}/RSGluon-{}_area/card.txt does not exist, making card'.format(twoD.tag,signal))
+    if not os.path.exists(twoD.tag+'/'+'signal{}_area/card.txt'.format(signal)):
+        print('{}/signal{}_area/card.txt does not exist, making card'.format(twoD.tag,signal))
         subset = twoD.ledger.select(_select_signal, 'signal{}'.format(signal), tf)
-        twoD.MakeCard(subset, 'RSGluon-{}_area'.format(signal))
+        twoD.MakeCard(subset, 'signal{}_area'.format(signal))
 
     # Now run Combine's Goodness of Fit method, either on Combine or locally. 
     if condor == False:
         twoD.GoodnessOfFit(
-            'RSGluon-{}_area'.format(signal), ntoys=nToys, freezeSignal=0,
+            'signal{}_area'.format(signal), ntoys=nToys, freezeSignal=0,
             condor=False
         )
 	# Once finished, we can plot the results immediately from the output rootfile.
@@ -327,7 +339,7 @@ def GoF(signal, tf='', nToys=500, condor=False):
     else:
 	# 500 (default) toys, split across 50 condor jobs
         twoD.GoodnessOfFit(
-            'RSGluon-{}_area'.format(signal), ntoys=nToys, freezeSignal=0,
+            'signal{}_area'.format(signal), ntoys=nToys, freezeSignal=0,
             condor=True, njobs=50
         )
 	# If submitting GoF jobs on condor, you must first wait for them to finish before plotting. 
@@ -338,16 +350,19 @@ def plot_GoF(signal, tf='', condor=False):
     Plot the Goodness of Fit as the measured saturated test statistic in data 
     compared against the distribution obtained from the toys. 
     '''
-    plot.plot_gof('ttbarfits16_3x1{}'.format('_'+tf if tf != '' else ''), 'RSGluon-{}_area'.format(signal), condor=condor)
+    plot.plot_gof(savedirname, '{}_area'.format(signal), condor=condor)
 
     
     
 if __name__ == "__main__":
     sig = 'RSGluon2000'
-#     make_workspace()
-#     ML_fit(sig)        # Perform the maximum likelihood fit for a given signal mass
-#     plot_fit(sig)      # Plot the postfit results, includinng nuisance pulls and 1D projections
-    perform_limit(sig) # Calculate the limit
+    make_workspace()
+    ML_fit(sig)        # Perform the maximum likelihood fit for a given signal mass
+    plot_fit(sig)      # Plot the postfit results, includinng nuisance pulls and 1D projections
+#     perform_limit(sig) # Calculate the limit
+#     GoF(sig, tf='', nToys=500, condor=False)	
+#     plot_GoF(sig, tf='', condor=False)	
+
     
     
 #     signals = [
@@ -382,5 +397,4 @@ if __name__ == "__main__":
         #   nToys = number of toys to generate. More toys gives better test statistic distribution,
         #           but will take longer if not using Condor.
         #   condor = whether or not to ship jobs off to Condor. Kinda doesn't work well on LXPLUS
-#     GoF(sig, tf='', nToys=10, condor=False)	
 
