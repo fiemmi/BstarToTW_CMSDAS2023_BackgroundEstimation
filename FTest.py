@@ -78,7 +78,7 @@ def FTest(poly1, poly2, directory, regionby):
     
     rpfSet1 = params1[params1["name"].str.contains("rratio")]
     nRpfs1  = len(rpfSet1.index)
-    nRpfs1 = 1
+    nRpfs1 = nParams_dict[poly1]
     _gof_for_FTest(twoD1, 'ttbar-RSGluon2000_area', card_or_w='card.txt')
     gofFile1 = area1+'/ttbar-RSGluon2000_area/higgsCombine_gof_data.GoodnessOfFit.mH120.root'
 
@@ -86,7 +86,7 @@ def FTest(poly1, poly2, directory, regionby):
     params2 = twoD2.ledger.select(_select_signal, 'signalRSGluon2000', '').alphaParams
     rpfSet2 = params2[params2["name"].str.contains("rratio")]
     nRpfs2  = len(rpfSet2.index)
-    nRpfs2 = 2
+    nRpfs2 = nParams_dict[poly2]
 
     _gof_for_FTest(twoD2, 'ttbar-RSGluon2000_area', card_or_w='card.txt')
     gofFile2 = area2+'/ttbar-RSGluon2000_area/higgsCombine_gof_data.GoodnessOfFit.mH120.root'
