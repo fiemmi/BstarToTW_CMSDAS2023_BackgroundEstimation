@@ -173,6 +173,39 @@ Repeat these steps for 2017 and 2018 in `regions/2017` and `regions/2018`
 The json files for the inclusive histograms are located in `inclusive/`
 The json files for the split b-tag and y regions are locateed in `regions/2016`, `regions/2017`, and `regions/2018`
 
+# Statistical Tests
+
+## FTests
+
+To run the FTest comparisons, first run 2dalphabet using all of the transfer functions you wish to compare. Save the directories in the format
+
+```
+ttbarfits_cen_ftest_1x2
+ttbarfits_fwd_ftest_1x2
+```
+
+for the central and forward 1x2 transfer function, and then the same for all the other transfer functions.
+
+To compare 1x2 to 2x2 for central and forward, in the `FTest.py` code, add the line to the end (below `if __name__=="__main__":`):
+
+```
+    directory = '/eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/tight/2018/'
+    
+    FTest('1x2','2x2', directory, 'cen')
+    FTest('1x2','2x2', directory, 'fwd')
+
+```
+and change the `directory` variable to the appropriate directory.
+
+Run the FTests and find the plots saved in the `ftests` directory:
+
+```
+mkdir ftests
+python FTest.py
+```
+
+
+
 # Systematics
 Systematic uncertainties were described in the config file section above. Add the Top pT uncertainties to the appropriate processes in the config file, then re-run the fit after having copied the old Combine card somewhere safe. Compare the pre- and post-Top pT Combine cards using `diff`.
 
