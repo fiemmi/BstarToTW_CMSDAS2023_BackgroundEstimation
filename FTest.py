@@ -37,20 +37,22 @@ def _gof_for_FTest(twoD, subtag, card_or_w='card.txt'):
         gof_data_cmd = ' '.join(gof_data_cmd)
         execute_cmd(gof_data_cmd)
 
-def FTest(poly1, poly2, directory, regionby):
+def FTest(poly1, poly2, directory, regionby, year):
     '''
     Perform an F-test to compare the goodness-of-fit between two transfer function parameterizations using existing working areas
     Arguments:
 	poly1 (str): e.g. '0x0', '1x1', ...
 	poly2 (str): e.g. '0x0', '1x1', ...
     '''
-    area1 = directory+'ttbarfits_'+regionby+'_ftest_{}'.format(poly1)
-    area2 = directory+'ttbarfits_'+regionby+'_ftest_{}'.format(poly2)
+    area1 = directory+'ttbarfits_'+regionby+year+'_ftest_{}'.format(poly1)
+    area2 = directory+'ttbarfits_'+regionby+year+'_ftest_{}'.format(poly2)
     
     nParams_dict = {
         '0x0':1,
         '0x1':2,
         '1x0':2,
+        '0x2':3,
+        '2x0':3,
         '1x1':3,
         '2x1':4,
         '1x2':4,
@@ -60,6 +62,8 @@ def FTest(poly1, poly2, directory, regionby):
         '2x3':6,
         '3x2':6,
         '3x3':7,
+        'f18':7,
+        'tf1':7
     }
     
     print('getting file {}/runConfig.json'.format(area1))
@@ -87,6 +91,8 @@ def FTest(poly1, poly2, directory, regionby):
     rpfSet2 = params2[params2["name"].str.contains("rratio")]
     nRpfs2  = len(rpfSet2.index)
     nRpfs2 = nParams_dict[poly2]
+    
+    if abs(nRpfs2 - nRpfs1) < 0.1: return 0
 
     _gof_for_FTest(twoD2, 'ttbar-RSGluon2000_area', card_or_w='card.txt')
     gofFile2 = area2+'/ttbar-RSGluon2000_area/higgsCombine_gof_data.GoodnessOfFit.mH120.root'
@@ -113,6 +119,12 @@ def FTest(poly1, poly2, directory, regionby):
 
         pval = fdist.Integral(0.0,base_fstat[0])
         print 'P-value: %s'%pval
+        
+        outfile = open('ftest_results_'+regionby+year+'.txt','a')
+        outfile.write(poly1+', '+poly2+', '+str(1-pval)+'\n')
+        outfile.close()
+                
+        
 
         c = TCanvas('c','c',800,600)
         c.SetLeftMargin(0.12)
@@ -147,6 +159,7 @@ def FTest(poly1, poly2, directory, regionby):
         model_info.AddText('p2 = '+poly2)
         model_info.AddText("p-value = %.2f"%(1-pval))
         model_info.Draw('same')
+        
 
         latex = TLatex()
         latex.SetTextAlign(11)
@@ -156,63 +169,78 @@ def FTest(poly1, poly2, directory, regionby):
         latex.DrawLatex(0.12,0.91,"CMS")
         latex.SetTextSize(0.05)
         latex.SetTextFont(52)
-        latex.DrawLatex(0.65,0.91,"Preliminary")
+        latex.DrawLatex(0.22,0.91,"Work in Progress")
         latex.SetTextFont(42)
-        latex.SetTextFont(52)
-        latex.SetTextSize(0.045)
-        c.SaveAs('./ftests/ftest_'+regionby+'_{0}_vs_{1}_2018.png'.format(poly1,poly2))
+        latex.SetTextSize(0.04)
+        if '2016' in year:
+            latex.DrawLatex(0.65,0.91,"35.9 fb^{-1}, 2016 (13 TeV)")
+        elif '2017' in year:
+            latex.DrawLatex(0.65,0.91,"41.5 fb^{-1}, 2017 (13 TeV)")
+        elif '2018' in year:
+            latex.DrawLatex(0.65,0.91,"60 fb^{-1}, 2018 (13 TeV)")
+            
+        if 'cen' in regionby:
+            latex.DrawLatex(0.7,0.7,"#bf{central}")
+        elif 'fwd' in regionby:
+            latex.DrawLatex(0.7,0.7,"#bf{forward}")
+
+        c.SaveAs('./ftests/ttbar_xsec/ftest_'+regionby+year+'_{0}_vs_{1}_{2}_rateParam.png'.format(poly1,poly2,year))
 #         c.SaveAs('./ftest_{0}_vs_{1}_notoys.png'.format(poly1,poly2))
 
+#         return 1-pval
 
     plot_FTest(base_fstat,nRpfs1,nRpfs2,nBins)
+    
 
 if __name__=="__main__":
-    directory = '/eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/restarting_10172023/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/tight_rebinned/2018/'
     
-    FTest('0x0','1x0', directory, 'cen')
-    FTest('0x0','1x0', directory, 'fwd')
     
-    FTest('0x0','0x1', directory, 'cen')
-    FTest('0x0','0x1', directory, 'fwd')
+    years = [
+#         '2016',
+#         '2017',
+        '2018'
+    ]
     
-    FTest('1x0','1x1', directory, 'cen')
-    FTest('1x0','1x1', directory, 'fwd')
+    regions = [
+        'cen',
+        'fwd'
+    ]
     
-    FTest('0x1','1x1', directory, 'cen')
-    FTest('0x1','1x1', directory, 'fwd')
+    
+    for year in years:
+        for region in regions:
+    
+            directory = '/eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/restarting_10172023/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/ttbar_xsec/'+year+'/'+region+'/ftests/'
         
-    FTest('1x1','2x1', directory, 'cen')
-    FTest('1x1','2x1', directory, 'fwd')
-    
-    FTest('1x1','1x2', directory, 'cen')
-    FTest('1x1','1x2', directory, 'fwd')
-    
-    FTest('1x1','3x1', directory, 'cen')
-    FTest('1x1','3x1', directory, 'fwd')
-    
-    FTest('2x1','3x1', directory, 'cen')
-    FTest('2x1','3x1', directory, 'fwd')
-    
-    FTest('2x2','3x1', directory, 'cen')
-    FTest('2x2','3x1', directory, 'fwd')
-    
-    FTest('1x1','2x2', directory, 'cen')
-    FTest('1x1','2x2', directory, 'fwd')
-    
-    FTest('1x2','2x2', directory, 'cen')
-    FTest('1x2','2x2', directory, 'fwd')
-    
-    FTest('2x1','2x2', directory, 'cen')
-    FTest('2x1','2x2', directory, 'fwd')
+        
+            params_list = [
+                '0x0',
+                '0x1',
+                '0x2',
+                '1x0',
+                '1x1',
+                '1x2',
+                '2x1',
+                '2x2'
+            ]
+            
+            for i in range(len(params_list)):
+                for j in range(len(params_list)-i-1):
+                    FTest(params_list[i], params_list[i+j+1], directory, region, year)
 
-    FTest('2x2','3x1', directory, 'cen')
-    FTest('2x2','3x1', directory, 'fwd')
+#             FTest('0x0','0x1', directory, region, year)
+#             FTest('0x0','1x0', directory, region, year)
+#             FTest('1x0','1x1', directory, region, year)
+#             FTest('0x1','1x1', directory, region, year)
+
+
+
     
-    FTest('3x1','2x2', directory, 'cen')
-    FTest('3x1','2x2', directory, 'fwd')
     
-    FTest('0x0','1x1', directory, 'cen')
-    FTest('0x0','1x1', directory, 'fwd')
+    
+    
+    
+
     
     
     

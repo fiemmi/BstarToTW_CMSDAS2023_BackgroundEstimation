@@ -22,6 +22,7 @@ gStyle.SetOptStat(0)
 gROOT.SetBatch(kTRUE)
 
 
+limits_info = open("limits.txt","a")
 
 # ## Initialize
 
@@ -39,21 +40,25 @@ bkgestname = 'mediumTight'
 
 years = [
 #          '2016',
-#          '2017',
-#        '2018',
-          'all'
+         '2017',
+#          '2018',
+#           'all'
         ]
 
 signals = [
+    'rsgluon',
     'zprime1',
-#     'zprime30',
-#     'rsgluon',
-    'zprime1_old',
-#     'zprime10_hold',
-#     'zprime30_old',
-#     'zprimeDM',
+#     'zprime1_low',
+    'zprime10',
+    'zprime30',
+    'zprimeDM',
 #     'zprimeDM_high',
+#    'zprime10_hold',
+#    'zprime30_old',
 ]
+
+
+limit_cross = {year: {} for year in years}
 
 
 condor_dir = '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/new/CMSSW_10_6_14/src/condor_limits/'
@@ -65,10 +70,21 @@ drawIntersection = False
 blind = True
 
 
-signal_df = json.load(open('signal_xs.json'))
+signal_df = json.load(open('signal_xs_AN.json'))
 
 for year in years:
+    
+    limit_cross[year] = { sig: [] for sig in signals}
+
+    
+    limits_info.write("\n"+year+"\n")
+    
     for signal in signals:
+        
+        print signal
+        
+        limits_info.write("\n"+signal+"\n")
+
     
 
         period = 1
@@ -105,7 +121,7 @@ for year in years:
 
         # directory where signal directories are located
 
-        directory = condor_dir + 'tight_v4/'+year+'/ttbarfits_inclusive'
+        directory = condor_dir + 'an_v4_inconsistent_binning/'+year+'/ttbarfits_inclusive'
 
 
         if bkgestname == 'antitagMedium':
@@ -176,26 +192,48 @@ for year in years:
 
         # For each signal
         for this_index, this_name in enumerate(signal_names):
-            # Setup call for one of the signal
-            this_xsec = signal_xsecs[this_index]
-            this_mass = signal_mass[this_index]
-            print(this_name+'/higgsCombine.Test.AsymptoticLimits.mH120.root')
-            this_output = TFile.Open(this_name+'/higgsCombine.Test.AsymptoticLimits.mH120.root') 
-        #     print(this_name+'/higgsCombineTest.AsymptoticLimits.mH120.root')
-        #     this_output = TFile.Open(this_name+'/higgsCombineTest.AsymptoticLimits.mH120.root')
-            if not this_output: continue
-            this_tree = this_output.Get('limit')
+            
+#             if '3000' in this_name: continue 
+            
+    
+    
+            try:
+                # Setup call for one of the signal
+                this_xsec = signal_xsecs[this_index]
+                this_mass = signal_mass[this_index]
+    #             print(this_name+'/higgsCombine.Test.AsymptoticLimits.mH120.root')
+                this_output = TFile.Open(this_name+'/higgsCombine.Test.AsymptoticLimits.mH120.root') 
+            #     print(this_name+'/higgsCombineTest.AsymptoticLimits.mH120.root')
+            #     this_output = TFile.Open(this_name+'/higgsCombineTest.AsymptoticLimits.mH120.root')
+                if not this_output: continue
+                this_tree = this_output.Get('limit')
 
-            this_xsec = this_xsec
+                this_xsec = this_xsec
 
-        #     print('this_xsec', this_xsec)
+            #     print('this_xsec', this_xsec)
+            
+            except:
+                continue
 
+        
+            
 
             # Set the mass (x axis)
+            
+            try:
+                this_tree.GetEntries()
+            except:
+                continue
+            
+            
             x_mass.append(this_mass)
             # Grab the cross section limits (y axis)
             for ievent in range(int(this_tree.GetEntries())):
+                
+                
                 this_tree.GetEntry(ievent)
+
+            
 
 
 
@@ -225,7 +263,7 @@ for year in years:
                         y_limit.append(0.0)
 
 
-
+#             print this_name, this_xsec, y_mclimit
         # In[16]:
 
 
@@ -241,6 +279,9 @@ for year in years:
 
 
         # Expected
+        
+      
+        
         print('---------DEBUG-----------')
         print('x_mass: {}'.format(x_mass))
         print('len x_mass: {}'.format(len(x_mass)))
@@ -281,14 +322,13 @@ for year in years:
             g_limit.GetXaxis().SetRangeUser(xmin, xmax)
             g_limit.SetMinimum(1e-4) #0.005
             g_limit.SetMaximum(ymax)
-        else:
-            print 'Blinded'
-            g_mclimit.GetXaxis().SetTitle("m_{"+signal_string+" [TeV]")  # NOT GENERIC
-            g_mclimit.GetYaxis().SetTitle("#sigma_{"+signal_string+" #times B("+signal_string+" #rightarrow t #bar{t}) [pb]") # NOT GENERIC
-            g_mclimit.GetYaxis().SetRangeUser(0., 80.)
-            g_mclimit.GetXaxis().SetRangeUser(xmin, xmax)
-            g_mclimit.SetMinimum(1e-4) #0.005
-            g_mclimit.SetMaximum(ymax)  
+
+        g_mclimit.GetXaxis().SetTitle("m_{"+signal_string+" [TeV]")  # NOT GENERIC
+        g_mclimit.GetYaxis().SetTitle("#sigma_{"+signal_string+" #times B("+signal_string+" #rightarrow t #bar{t}) [pb]") # NOT GENERIC
+        g_mclimit.GetYaxis().SetRangeUser(0., 80.)
+        g_mclimit.GetXaxis().SetRangeUser(xmin, xmax)
+        g_mclimit.SetMinimum(1e-4) #0.005
+        g_mclimit.SetMaximum(ymax)  
 
 
         # Will later be 1 and 2 sigma expected
@@ -333,34 +373,43 @@ for year in years:
 
         print 'expectedMassLimit', expectedMassLimit
         print 'expectedCrossLimit', expectedCrossLimit
+        
+        
+        limit_cross[year][signal] = [expectedMassLimit, expectedCrossLimit]
+        
+        
+        limits_info.write('expectedMassLimit'+"\n")
+        limits_info.write(str(expectedMassLimit)+"\n")
+        limits_info.write('expectedCrossLimit'+"\n")
+        limits_info.write(str(expectedCrossLimit)+"\n")
+
 
         if not blind:
-            g_limit.GetXaxis().SetTitle("m_{"+signal_string+"} [TeV]")  # NOT GENERIC
-            g_limit.GetYaxis().SetTitle("#sigma_{"+signal_string+"} #times B("+signal_string+" #rightarrow t #bar{t}) [pb]") # NOT GENERIC
-            g_limit.GetXaxis().SetTitleSize(0.055)
-            g_limit.GetYaxis().SetTitleSize(0.05)
-            g_limit.Draw('ap')
-            g_error95.Draw(fillstyle)
-            g_error.Draw(fillstyle)
-            g_mclimit.Draw("ap")
-            g_limit.Draw("ap")
+#             g_limit.GetXaxis().SetTitle("m_{"+signal_string+"} [TeV]")  # NOT GENERIC
+#             g_limit.GetYaxis().SetTitle("#sigma_{"+signal_string+"} #times B("+signal_string+" #rightarrow t #bar{t}) [pb]") # NOT GENERIC
+#             g_limit.GetXaxis().SetTitleSize(0.055)
+#             g_limit.GetYaxis().SetTitleSize(0.05)
+#             g_limit.Draw('ap')
+#             g_error95.Draw(fillstyle)
+#             g_error.Draw(fillstyle)
+            g_limit.Draw("ap same")
 
-            graphWP.Draw(linestyle)
-            g_limit.GetYaxis().SetTitleOffset(1.5)
-            g_limit.GetXaxis().SetTitleOffset(1.25)
+#             graphWP.Draw(linestyle)
+#             g_limit.GetYaxis().SetTitleOffset(1.5)
+#             g_limit.GetXaxis().SetTitleOffset(1.25)
 
-        else:
-            g_mclimit.GetXaxis().SetTitle("m_{"+signal_string+"} [TeV]")  # NOT GENERIC
-            g_mclimit.GetYaxis().SetTitle("#sigma_{"+signal_string+"} #times B("+signal_string+" #rightarrow t #bar{t}) [pb]") # NOT GENERIC
-            g_mclimit.GetXaxis().SetTitleSize(0.055)
-            g_mclimit.GetYaxis().SetTitleSize(0.05)
-            g_mclimit.Draw("ap")
-            g_error95.Draw(fillstyle)
-            g_error.Draw(fillstyle)
-            g_mclimit.Draw(linestyle)
-            graphWP.Draw(linestyle)
-            g_mclimit.GetYaxis().SetTitleOffset(1.5)
-            g_mclimit.GetXaxis().SetTitleOffset(1.25)
+
+        g_mclimit.GetXaxis().SetTitle("m_{"+signal_string+"} [TeV]")  # NOT GENERIC
+        g_mclimit.GetYaxis().SetTitle("#sigma_{"+signal_string+"} #times B("+signal_string+" #rightarrow t #bar{t}) [pb]") # NOT GENERIC
+        g_mclimit.GetXaxis().SetTitleSize(0.055)
+        g_mclimit.GetYaxis().SetTitleSize(0.05)
+        g_mclimit.Draw("ap")
+        g_error95.Draw(fillstyle)
+        g_error.Draw(fillstyle)
+        g_mclimit.Draw(linestyle)
+        graphWP.Draw(linestyle)
+        g_mclimit.GetYaxis().SetTitleOffset(1.5)
+        g_mclimit.GetXaxis().SetTitleOffset(1.25)
 
         # graphWP.Draw("c")
 
@@ -377,11 +426,19 @@ for year in years:
             expLineLabel.Draw()
 
         print 'Expected limit: '+str(expectedMassLimit) + ' +'+str(upLimit-expectedMassLimit) +' -'+str(expectedMassLimit-lowLimit) + ' TeV' # NOT GENERIC
+        
+        limits_info.write('expectedLimit'+"\n")
+        limits_info.write(str(expectedMassLimit) + ' +'+str(upLimit-expectedMassLimit) +' -'+str(expectedMassLimit-lowLimit) + ' TeV'+"\n")
+       
         if not blind:
             obsMassLimit,obsCrossLimit = Inter(g_limit,graphWP) if len(Inter(g_limit,graphWP)) > 0 else -1.0
             print 'Observed limit: '+str(obsMassLimit) + ' TeV'
+            
+            limits_info.write('ObservedLimit'+"\n")
+            limits_info.write(str(obsMassLimit) + ' TeV')
 
-            obsLine = TLine(obsMassLimit,g_mclimit.GetMinimum(),obsMassLimit,obsCrossLimit)
+            
+            obsLine = TLine(obsMassLimit,g_limit.GetMinimum(),obsMassLimit,obsCrossLimit)
             obsLine.SetLineStyle(2)
             obsLine.Draw()
 
@@ -389,7 +446,7 @@ for year in years:
                 obsLineLabel = TPaveText(obsMassLimit-300, obsCrossLimit*3, obsMassLimit+300, obsCrossLimit*12,"NB")
                 obsLineLabel.SetFillColorAlpha(kWhite,0)
                 obsLineLabel.AddText(str(int(obsMassLimit))+' TeV')
-                obsLineLabel.Draw()
+                obsLineLabel.Draw("same")
 
 
 
@@ -417,14 +474,14 @@ for year in years:
 
         climits.RedrawAxis()
 
-        CMS_lumi.extraText = 'Preliminary'
+        CMS_lumi.extraText = 'Work In Progress'
         CMS_lumi.lumiTextSize     = 0.4
         CMS_lumi.cmsTextSize      = 0.5
 
         CMS_lumi.CMS_lumi(climits, period, 11)
 
 
-        savefilename = 'limits/tight_v4/limits_combine_' + signal + '_' + year + '0324.pdf'
+        savefilename = 'limits/thesis_endorsement/limits_combine_' + signal + '_' + year + '_0424.pdf'
         
         if not blind: savefilename = savefilename.replace('.pdf', '_observed.pdf')
 
@@ -435,4 +492,7 @@ for year in years:
 
 
 
+limits_info.close()
+
+print(limit_cross)
 

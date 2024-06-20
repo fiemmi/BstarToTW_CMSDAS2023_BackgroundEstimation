@@ -13,11 +13,11 @@
         ]
     },
     "REGIONS": {
-        "cen18Pass": {
+        "fwd18Pass": {
             "PROCESSES": ["18_SIGNAME","18_TTbar"],
             "BINNING": "default"
             },
-        "cen18Fail": {
+        "fwd18Fail": {
                 "PROCESSES": ["18_SIGNAME","18_TTbar"],
                 "BINNING": "default"
             }
@@ -42,8 +42,8 @@
                 "LOC": "path/FILE:HIST"
             },
             "18_TTbar": {
-                "SYSTEMATICS": ["lumi_corr", "lumi_corr1718", "lumi18", "ttbar_xsec", "pileup18", "pdf", "jes18", "jer18", "q2"],
-                "SCALE": 0.943069855651, 
+                "SYSTEMATICS": ["lumi_corr","lumi_corr1718", "lumi18", "ttbar_xsec", "pileup18", "pdf", "jes18", "jer18", "q2"],
+                "SCALE": 1.0,
                 "COLOR": 2,
                 "TYPE": "BKG",
                 "TITLE": "t#bar{t}",
@@ -66,7 +66,7 @@
         },
         "ttbar_xsec": {
             "CODE": 0,
-            "VAL": 1.93273444013
+            "VAL": 1.20
         },
         "btag_unc": {
             "CODE": 0,
@@ -149,7 +149,7 @@
     "OPTIONS": {
 	"blindedPlots": [],
 	"blindedFit": [],
-        "plotPrefitSigInFitB": true,
+        "plotPrefitSigInFitB": false,
 	"plotUncerts": false,
 	"plotTitles": false,
 	"plotTemplateComparisons": false,
