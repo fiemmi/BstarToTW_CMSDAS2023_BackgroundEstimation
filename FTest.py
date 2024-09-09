@@ -196,8 +196,8 @@ if __name__=="__main__":
     
     
     years = [
-#         '2016',
-#         '2017',
+        '2016',
+        '2017',
         '2018'
     ]
     
@@ -210,7 +210,7 @@ if __name__=="__main__":
     for year in years:
         for region in regions:
     
-            directory = '/eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/restarting_10172023/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/ttbar_xsec/'+year+'/'+region+'/ftests/'
+            directory = '/eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/restarting_10172023/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/results/'+year+'/'+region+'/ftests/'
         
         
             params_list = [
@@ -228,10 +228,6 @@ if __name__=="__main__":
                 for j in range(len(params_list)-i-1):
                     FTest(params_list[i], params_list[i+j+1], directory, region, year)
 
-#             FTest('0x0','0x1', directory, region, year)
-#             FTest('0x0','1x0', directory, region, year)
-#             FTest('1x0','1x1', directory, region, year)
-#             FTest('0x1','1x1', directory, region, year)
 
 
 
