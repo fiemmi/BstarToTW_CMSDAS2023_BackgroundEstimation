@@ -186,6 +186,8 @@ ttbarfits_fwd_ftest_1x2
 
 for the central and forward 1x2 transfer function, and then the same for all the other transfer functions.
 
+These transfer fucntion scenarios can be run automatically with the `results/run2dAlphabet.py` script, with the function `runAllTransferFunctions()`
+
 To compare 1x2 to 2x2 for central and forward, in the `FTest.py` code, add the line to the end (below `if __name__=="__main__":`):
 
 ```
@@ -203,6 +205,8 @@ Run the FTests and find the plots saved in the `ftests` directory:
 mkdir ftests
 python FTest.py
 ```
+
+To choose the optimal transfer function, start by comparing the transfer functions with the lowest parameters. If any of those comparisons has a p-value < 0.3, then the transfer function with the greater number of parameters is optimal. Proceed to compare that transfer function with the transfer function with 1 additional parameter, and repeat the p-value comparison.
 
 
 
