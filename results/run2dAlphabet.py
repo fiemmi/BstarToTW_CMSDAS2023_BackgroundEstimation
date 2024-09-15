@@ -91,26 +91,27 @@ def runLimits():
 
         for line in open('../../'+jsonfile):
 
-            if '"ttbar_xsec": {' in line: 
-                replace_error = True
+            # replace ttbar xsec value
+#             if '"ttbar_xsec": {' in line: 
+#                 replace_error = True
 
 
-            if '_TTbar": {' in line:
-                print line
-                replace_value = True
+#             if '_TTbar": {' in line:
+#                 replace_value = True
 
 
-            if replace_error and '"VAL":' in line:
-                line = '            "VAL": ' + str(2.0) + '\n'
-                replace_error = False
+#             if replace_error and '"VAL":' in line:
+#                 line = '            "VAL": ' + str(2.0) + '\n'
+#                 replace_error = False
 
 
-            if replace_value and '"SCALE":' in line:
-                print line
-                line = '                "SCALE": ' + str(1.0) + ', \n'
-                print line
-                replace_value = False
+#             if replace_value and '"SCALE":' in line:
+#                 line = '                "SCALE": ' + str(1.0) + ', \n'
+#                 replace_value = False
 
+
+            # signals to run over
+            
 
             if '	"SIGNAME": [' in line: 
                 replace_signals = True
@@ -118,7 +119,9 @@ def runLimits():
             elif replace_signals and i == 2:
                 i = 0
                 replace_signals = False
-                with open('../../../all_signals.txt', 'r') as file:
+                
+                # switch to one_signal.txt for 2 TeV rsgluon or rsgluon_signals.txt for rsgluon signals only
+                with open('../../../one_signal.txt', 'r') as file:
                     all_signals = file.read()
                     newfile.write(line.replace(line, all_signals) + '\n')
             elif replace_signals:
@@ -167,32 +170,28 @@ def runAllTransferFunctions():
             replace_value = False
             newfile = open('new.json', 'w')
 
-            for line in open('../../'+jsonfile):
+            
+            # replace ttbar xsec value
+#             for line in open('../../'+jsonfile):
 
-                if '"ttbar_xsec": {' in line: 
-                    replace_error = True
-
-
-                if '_TTbar": {' in line:
-                    print line
-                    replace_value = True
+#                 if '"ttbar_xsec": {' in line: 
+#                     replace_error = True
 
 
-                if replace_error and '"VAL":' in line:
-                    line = '            "VAL": ' + str(2.0) + '\n'
-                    replace_error = False
+#                 if '_TTbar": {' in line:
+#                     replace_value = True
 
 
-                if replace_value and '"SCALE":' in line:
-                    print line
-                    line = '                "SCALE": ' + str(1.0) + ', \n'
-                    print line
-                    replace_value = False
+#                 if replace_error and '"VAL":' in line:
+#                     line = '            "VAL": ' + str(2.0) + '\n'
+#                     replace_error = False
 
 
+#                 if replace_value and '"SCALE":' in line:
+#                     line = '                "SCALE": ' + str(1.0) + ', \n'
+#                     replace_value = False
 
-
-                newfile.write(line)
+#                 newfile.write(line)
 
             newfile.close()
 
