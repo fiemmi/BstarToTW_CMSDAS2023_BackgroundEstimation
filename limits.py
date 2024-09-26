@@ -22,7 +22,23 @@ gStyle.SetOptStat(0)
 gROOT.SetBatch(kTRUE)
 
 
-limits_info = open("limits.txt","a")
+newGreen = ROOT.TColor.GetColor('#607641')
+newYellow = ROOT.TColor.GetColor('#F5BB54')
+
+oldGreen = kGreen + 1
+oldYellow = kOrange
+
+
+condor_dir = '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/new/CMSSW_10_6_14/src/condor_limits/'
+savedir = 'results'
+# savedir = 'ttagSF'
+
+if not os.path.exists(savedir+"/limits"):
+        os.makedirs(savedir+"/limits")
+
+
+
+limits_info = open(savedir+"/limits/limits.txt","a")
 
 # ## Initialize
 
@@ -40,28 +56,25 @@ bkgestname = 'mediumTight'
 
 years = [
 #          '2016',
-         '2017',
+#          '2017',
 #          '2018',
-#           'all'
+          'all'
         ]
 
 signals = [
-    'rsgluon',
-    'zprime1',
-#     'zprime1_low',
-    'zprime10',
-    'zprime30',
-    'zprimeDM',
-#     'zprimeDM_high',
+   'rsgluon',
+#    'zprime1',
+#    'zprime1_high',
+#    'zprime10',
+#    'zprime30',
+#    'zprimeDM',
+#    'zprimeDM_high',
 #    'zprime10_hold',
 #    'zprime30_old',
 ]
 
 
 limit_cross = {year: {} for year in years}
-
-
-condor_dir = '/afs/cern.ch/user/m/mmorris/BackgroundEstimation/new/CMSSW_10_6_14/src/condor_limits/'
 
 
 
@@ -121,7 +134,7 @@ for year in years:
 
         # directory where signal directories are located
 
-        directory = condor_dir + 'an_v4_inconsistent_binning/'+year+'/ttbarfits_inclusive'
+        directory = condor_dir + '/' + savedir + '/' + year + '/ttbarfits_inclusive'
 
 
         if bkgestname == 'antitagMedium':
@@ -162,6 +175,8 @@ for year in years:
 
         theory_xsecs = signal_df[signal]['theory']
         signal_xsecs = signal_df[signal]['expected']
+        
+        
 
 
         # In[13]:
@@ -210,7 +225,7 @@ for year in years:
 
                 this_xsec = this_xsec
 
-            #     print('this_xsec', this_xsec)
+                
             
             except:
                 continue
@@ -220,10 +235,11 @@ for year in years:
 
             # Set the mass (x axis)
             
-            try:
-                this_tree.GetEntries()
-            except:
-                continue
+#             try:
+#                 this_tree.GetEntries()
+#                 print this_mass, "this_tree"
+#             except:
+#                 continue
             
             
             x_mass.append(this_mass)
@@ -235,11 +251,12 @@ for year in years:
 
             
 
-
+#                 print this_mass, this_tree.quantileExpected
 
                 # Nominal expected
-                if this_tree.quantileExpected == 0.5:
+                if round(this_tree.quantileExpected,2) == 0.5:
                     y_mclimit.append(this_tree.limit*this_xsec)
+                    print this_mass, this_tree.limit
                 # -1 sigma expected
                 if round(this_tree.quantileExpected,2) == 0.16:
                     y_mclimitlow68.append(this_tree.limit*this_xsec)
@@ -252,6 +269,8 @@ for year in years:
                 # +2 sigma expected
                 if round(this_tree.quantileExpected,3) == 0.975:
                     y_mclimitup95.append(this_tree.limit*this_xsec)
+                    
+                    
 
                 # Observed (plot only if unblinded)
                 if this_tree.quantileExpected == -1: 
@@ -263,10 +282,8 @@ for year in years:
                         y_limit.append(0.0)
 
 
-#             print this_name, this_xsec, y_mclimit
-        # In[16]:
 
-
+            
 
 
         # Make Canvas and TGraphs (mostly stolen from other code that formats well)
@@ -337,33 +354,45 @@ for year in years:
 
         g_mc2plus = TGraph(len(x_mass), x_mass, y_mclimitup95)
         g_mc2minus = TGraph(len(x_mass), x_mass, y_mclimitlow95)
+        
+        
+        print "mass", len(x_mass), x_mass
+        print "limit", len(y_mclimit), y_mclimit
+
 
 
         # Theory line
         graphWP = ROOT.TGraph()
         graphWP.SetTitle("")
         graphWP.SetMarkerStyle(23)
-        graphWP.SetMarkerColor(4)
-        graphWP.SetMarkerSize(0.5)
+        graphWP.SetMarkerColor(2) # changed from 4 (blue)
+        graphWP.SetMarkerSize(0.25) # changed from 0.5
         graphWP.GetYaxis().SetRangeUser(0., 80.)
         graphWP.GetXaxis().SetRangeUser(xmin, xmax)
         graphWP.SetMinimum(1e-4) #0.005
         graphWP.SetMaximum(ymax)
-        for index,mass in enumerate(signal_mass):
-            xsec = theory_xsecs[index]
-            graphWP.SetPoint(index,    mass,   xsec    )
+        
+        if signal == 'zprime1':
+            for index,mass in enumerate(signal_df[signal+'_theory']['mass']):
+                xsec = signal_df[signal+'_theory']['theory'][index]
+                print mass, xsec
+                graphWP.SetPoint(index,    mass,   xsec    )
+        else:
+            for index,mass in enumerate(signal_mass):
+                xsec = theory_xsecs[index]
+                graphWP.SetPoint(index,    mass,   xsec    )
 
-        graphWP.SetLineWidth(3)
-        graphWP.SetLineColor(4)
+        graphWP.SetLineWidth(2) # changed from 3 
+        graphWP.SetLineColor(2) # changed from 4 (blue)
 
         # 2 sigma expected
         g_error95 = make_smooth_graph(g_mc2minus, g_mc2plus)
-        g_error95.SetFillColor(kOrange)
+        g_error95.SetFillColor(newYellow)
         g_error95.SetLineColor(0)
 
         # 1 sigma expected
         g_error = make_smooth_graph(g_mcminus, g_mcplus)
-        g_error.SetFillColor( kGreen+1)
+        g_error.SetFillColor(newGreen)
         g_error.SetLineColor(0)
 
         # Finally calculate the intercept
@@ -474,16 +503,17 @@ for year in years:
 
         climits.RedrawAxis()
 
-        CMS_lumi.extraText = 'Work In Progress'
+#         CMS_lumi.extraText = 'Work In Progress'
+        CMS_lumi.extraText = 'Preliminary'
         CMS_lumi.lumiTextSize     = 0.4
         CMS_lumi.cmsTextSize      = 0.5
 
         CMS_lumi.CMS_lumi(climits, period, 11)
 
 
-        savefilename = 'limits/thesis_endorsement/limits_combine_' + signal + '_' + year + '_0424.pdf'
+        savefilename = savedir+'/limits/limits_combine_' + signal + '_' + year + '_0924.pdf'
         
-        if not blind: savefilename = savefilename.replace('.pdf', '_observed.pdf')
+#         if not blind: savefilename = savefilename.replace('.pdf', '_observed.pdf')
 
         climits.SaveAs(savefilename)
         climits.SaveAs(savefilename.replace('pdf', 'png'))
