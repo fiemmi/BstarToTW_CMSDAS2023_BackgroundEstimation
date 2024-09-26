@@ -1,0 +1,60 @@
+---------DEBUG-----------
+x_mass: array('d', [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0])
+len x_mass: 9
+y_mclimit: array('d', [39.69412500000001, 2.3421250000000002, 1.147696875, 1.12443, 0.412865, 0.644819, 0.861372, 0.9001260000000001, 1.1522385])
+Blinded
+expectedMassLimit 1.428
+expectedCrossLimit 7.55383658
+Expected limit: 1.428 +1.056 -2.428 TeV
+saving limits/pdf/regions/limits_combine_rsgluon_2016_cen0b_blind.pdf
+saving limits/png/regions/limits_combine_rsgluon_2016_cen0b_blind.png
+---------DEBUG-----------
+x_mass: array('d', [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0])
+len x_mass: 9
+y_mclimit: array('d', [65.19300000000001, 6.855, 1.68328875, 0.290604375, 0.42740249999999996, 0.13230350000000002, 0.14760900000000002, 0.27302400000000004, 0.3737223])
+Blinded
+expectedMassLimit 2.3976
+expectedCrossLimit 0.571506625
+Expected limit: 2.3976 +1.3008 -3.3976 TeV
+saving limits/pdf/regions/limits_combine_rsgluon_2016_cen1b_blind.pdf
+saving limits/png/regions/limits_combine_rsgluon_2016_cen1b_blind.png
+---------DEBUG-----------
+x_mass: array('d', [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0])
+len x_mass: 9
+y_mclimit: array('d', [40.745625000000004, 4.6157, 0.9063862500000001, 0.317195625, 0.150463125, 0.1117515, 0.10032300000000001, 0.247428, 0.3849426])
+Blinded
+expectedMassLimit 1.5528
+expectedCrossLimit 4.206295369
+Expected limit: 1.5528 +2.3184 -2.5528 TeV
+saving limits/pdf/regions/limits_combine_rsgluon_2016_cen2b_blind.pdf
+saving limits/png/regions/limits_combine_rsgluon_2016_cen2b_blind.png
+---------DEBUG-----------
+x_mass: array('d', [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0])
+len x_mass: 9
+y_mclimit: array('d', [109.88175000000001, 7.129200000000001, 1.65974625, 1.2231975, 1.0467, 2.014096, 1.068408, 4.27311, 1.9799514])
+Blinded
+expectedMassLimit 5.4312
+expectedCrossLimit -0.00233523976
+Expected limit: 5.4312 +-3.9504 -0.0 TeV
+saving limits/pdf/regions/limits_combine_rsgluon_2016_fwd0b_blind.pdf
+saving limits/png/regions/limits_combine_rsgluon_2016_fwd0b_blind.png
+---------DEBUG-----------
+x_mass: array('d', [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0])
+len x_mass: 9
+y_mclimit: array('d', [397.46700000000004, 30.527600000000003, 6.403560000000001, 3.175755, 2.01199, 1.942164, 2.916396, 4.60017, 3.4524])
+Blinded
+expectedMassLimit 6.5112
+expectedCrossLimit -0.0187987828
+Expected limit: 6.5112 +-7.5112 -0.0048 TeV
+saving limits/pdf/regions/limits_combine_rsgluon_2016_fwd1b_blind.pdf
+saving limits/png/regions/limits_combine_rsgluon_2016_fwd1b_blind.png
+---------DEBUG-----------
+x_mass: array('d', [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0])
+len x_mass: 9
+y_mclimit: array('d', [108.83025, 15.995000000000001, 2.4366487500000003, 0.926895, 0.6396499999999999, 0.46498900000000004, 0.503532, 0.81054, 1.36326645])
+Blinded
+expectedMassLimit -1
+expectedCrossLimit -1
+Expected limit: -1 +2.8264 -0 TeV
+saving limits/pdf/regions/limits_combine_rsgluon_2016_fwd2b_blind.pdf
+saving limits/png/regions/limits_combine_rsgluon_2016_fwd2b_blind.png

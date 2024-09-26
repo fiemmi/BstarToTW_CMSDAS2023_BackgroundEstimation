@@ -1,0 +1,13 @@
+	"SIGNAME": [
+                "signalRSGluon1000",
+                "signalRSGluon1500",
+                "signalRSGluon2000",
+                "signalRSGluon2500",
+                "signalRSGluon3000",
+                "signalRSGluon3500",
+                "signalRSGluon4000",
+                "signalRSGluon4500",
+                "signalRSGluon5000",
+                "signalRSGluon5500",
+                "signalRSGluon6000"
+        ]

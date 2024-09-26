@@ -37,16 +37,37 @@ def _gof_for_FTest(twoD, subtag, card_or_w='card.txt'):
         gof_data_cmd = ' '.join(gof_data_cmd)
         execute_cmd(gof_data_cmd)
 
-def FTest(poly1, poly2):
+def FTest(poly1, poly2, directory, regionby, year):
     '''
     Perform an F-test to compare the goodness-of-fit between two transfer function parameterizations using existing working areas
     Arguments:
 	poly1 (str): e.g. '0x0', '1x1', ...
 	poly2 (str): e.g. '0x0', '1x1', ...
     '''
-    area1 = 'tWfits_{}'.format(poly1)
-    area2 = 'tWfits_{}'.format(poly2)
-
+    area1 = directory+'ttbarfits_'+regionby+year+'_ftest_{}'.format(poly1)
+    area2 = directory+'ttbarfits_'+regionby+year+'_ftest_{}'.format(poly2)
+    
+    nParams_dict = {
+        '0x0':1,
+        '0x1':2,
+        '1x0':2,
+        '0x2':3,
+        '2x0':3,
+        '1x1':3,
+        '2x1':4,
+        '1x2':4,
+        '2x2':5,
+        '3x1':5,
+        '1x3':5,
+        '2x3':6,
+        '3x2':6,
+        '3x3':7,
+        'f18':7,
+        'tf1':7
+    }
+    
+    print('getting file {}/runConfig.json'.format(area1))
+    
     twoD1 = TwoDAlphabet(area1, '{}/runConfig.json'.format(area1), loadPrevious=True)
     twoD2 = TwoDAlphabet(area2, '{}/runConfig.json'.format(area2), loadPrevious=True)
 
@@ -55,21 +76,29 @@ def FTest(poly1, poly2):
     nBins = (len(binning.xbinList)-1)*(len(binning.ybinList)-1)
 
     # get number of RPF params and run GoF for poly1
-    params1 = twoD1.ledger.select(_select_signal, 'signalLH2400', '').alphaParams
+    params1 = twoD1.ledger.select(_select_signal, 'signalRSGluon2000', '').alphaParams
+    
+    print('params1', params1)
+    
     rpfSet1 = params1[params1["name"].str.contains("rratio")]
     nRpfs1  = len(rpfSet1.index)
-    _gof_for_FTest(twoD1, 'tW-2400_area', card_or_w='card.txt')
-    gofFile1 = area1+'/tW-2400_area/higgsCombine_gof_data.GoodnessOfFit.mH120.root'
+    nRpfs1 = nParams_dict[poly1]
+    _gof_for_FTest(twoD1, 'ttbar-RSGluon2000_area', card_or_w='card.txt')
+    gofFile1 = area1+'/ttbar-RSGluon2000_area/higgsCombine_gof_data.GoodnessOfFit.mH120.root'
 
     # get number of RPF params and run GoF for poly2
-    params2 = twoD2.ledger.select(_select_signal, 'signalLH2400', '').alphaParams
+    params2 = twoD2.ledger.select(_select_signal, 'signalRSGluon2000', '').alphaParams
     rpfSet2 = params2[params2["name"].str.contains("rratio")]
     nRpfs2  = len(rpfSet2.index)
-    _gof_for_FTest(twoD2, 'tW-2400_area', card_or_w='card.txt')
-    gofFile2 = area2+'/tW-2400_area/higgsCombine_gof_data.GoodnessOfFit.mH120.root'
+    nRpfs2 = nParams_dict[poly2]
+    
+    if abs(nRpfs2 - nRpfs1) < 0.1: return 0
+
+    _gof_for_FTest(twoD2, 'ttbar-RSGluon2000_area', card_or_w='card.txt')
+    gofFile2 = area2+'/ttbar-RSGluon2000_area/higgsCombine_gof_data.GoodnessOfFit.mH120.root'
 
     base_fstat = FstatCalc(gofFile1,gofFile2,nRpfs1,nRpfs2,nBins)
-    print(base_fstat)
+    print 'base_fstat', base_fstat
 
     # Now define a sub function for plotting
     def plot_FTest(base_fstat,nRpfs1,nRpfs2,nBins):
@@ -85,9 +114,17 @@ def FTest(poly1, poly2):
         fdist.SetParameter(0,1)
         fdist.SetParameter(1,ftest_p2-ftest_p1)
         fdist.SetParameter(2,ftest_nbins-ftest_p2)
+        
+        print(ftest_nbins, ftest_p1, ftest_p2)
 
         pval = fdist.Integral(0.0,base_fstat[0])
         print 'P-value: %s'%pval
+        
+        outfile = open('ftest_results_'+regionby+year+'.txt','a')
+        outfile.write(poly1+', '+poly2+', '+str(1-pval)+'\n')
+        outfile.close()
+                
+        
 
         c = TCanvas('c','c',800,600)
         c.SetLeftMargin(0.12)
@@ -122,6 +159,7 @@ def FTest(poly1, poly2):
         model_info.AddText('p2 = '+poly2)
         model_info.AddText("p-value = %.2f"%(1-pval))
         model_info.Draw('same')
+        
 
         latex = TLatex()
         latex.SetTextAlign(11)
@@ -131,13 +169,77 @@ def FTest(poly1, poly2):
         latex.DrawLatex(0.12,0.91,"CMS")
         latex.SetTextSize(0.05)
         latex.SetTextFont(52)
-        latex.DrawLatex(0.65,0.91,"Preliminary")
+        latex.DrawLatex(0.22,0.91,"Work in Progress")
         latex.SetTextFont(42)
-        latex.SetTextFont(52)
-        latex.SetTextSize(0.045)
-        c.SaveAs('./ftest_{0}_vs_{1}_notoys.png'.format(poly1,poly2))
+        latex.SetTextSize(0.04)
+        if '2016' in year:
+            latex.DrawLatex(0.65,0.91,"35.9 fb^{-1}, 2016 (13 TeV)")
+        elif '2017' in year:
+            latex.DrawLatex(0.65,0.91,"41.5 fb^{-1}, 2017 (13 TeV)")
+        elif '2018' in year:
+            latex.DrawLatex(0.65,0.91,"60 fb^{-1}, 2018 (13 TeV)")
+            
+        if 'cen' in regionby:
+            latex.DrawLatex(0.7,0.7,"#bf{central}")
+        elif 'fwd' in regionby:
+            latex.DrawLatex(0.7,0.7,"#bf{forward}")
+
+        c.SaveAs('./ftests/ttbar_xsec/ftest_'+regionby+year+'_{0}_vs_{1}_{2}_rateParam.png'.format(poly1,poly2,year))
+#         c.SaveAs('./ftest_{0}_vs_{1}_notoys.png'.format(poly1,poly2))
+
+#         return 1-pval
 
     plot_FTest(base_fstat,nRpfs1,nRpfs2,nBins)
+    
 
 if __name__=="__main__":
-    FTest('1x1','')
+    
+    
+    years = [
+        '2016',
+        '2017',
+        '2018'
+    ]
+    
+    regions = [
+        'cen',
+        'fwd'
+    ]
+    
+    
+    for year in years:
+        for region in regions:
+    
+            directory = '/eos/home-m/mmorris/Documents/TTbarResonance/backgroundEstimate/restarting_10172023/CMSSW_10_6_14/src/BstarToTW_CMSDAS2023_BackgroundEstimation/results/'+year+'/'+region+'/ftests/'
+        
+        
+            params_list = [
+                '0x0',
+                '0x1',
+                '0x2',
+                '1x0',
+                '1x1',
+                '1x2',
+                '2x1',
+                '2x2'
+            ]
+            
+            for i in range(len(params_list)):
+                for j in range(len(params_list)-i-1):
+                    FTest(params_list[i], params_list[i+j+1], directory, region, year)
+
+
+
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
