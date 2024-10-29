@@ -7,7 +7,7 @@
 	"HIST": "MttvsMt$region",
 	"HIST_UP": "MttvsMt$region$systup",
 	"HIST_DOWN": "MttvsMt$region$systdown",
-	"path": "/eos/home-m/mmorris/Documents/TTbarResonance/twodalphabet/Run2_deepak8_tight_to_mediumnotight_v6/",
+	"path": "/eos/home-m/mmorris/Documents/TTbarResonance/twodalphabet/Run2_deepak8_tight_to_mediumnotight_newSFs/",
 	"SIGNAME": [
                 "signalRSGluon2000"
         ]
@@ -42,7 +42,7 @@
                 "LOC": "path/FILE:HIST"
             },
             "16_TTbar": {
-                "SYSTEMATICS": ["lumi_corr", "lumi16", "ttbar_xsec", "prefiring", "pileup", "pdf", "q2", "jes16", "jer16", "ttag_pt1_16", "ttag_pt2_16", "ttag_pt3_16"],
+                "SYSTEMATICS": ["lumi_corr", "lumi16", "ttbar_xsec", "prefiring", "pileup", "pdf", "q2", "jes16", "jer16", "ttag_pt1_16", "ttag_pt2_16", "ttag_pt3_16","ptreweight"],
                 "SCALE": 1.0,
                 "COLOR": 2,
                 "TYPE": "BKG",
@@ -129,23 +129,31 @@
             "CODE": 2,
             "UP": "path/FILE:HIST_UP",
             "DOWN": "path/FILE:HIST_DOWN",
-                "SCALE": 1.0,
-            "SIGMA": 1.0
+            "SCALE": 1.0,
+            "SIGMA": 10.0
         },
         "ttag_pt2_16": {
             "ALIAS": "TTAG_PT2",
             "CODE": 2,
             "UP": "path/FILE:HIST_UP",
             "DOWN": "path/FILE:HIST_DOWN",
-                "SCALE": 1.0,
-            "SIGMA": 1.0
+            "SCALE": 1.0,
+            "SIGMA": 10.0
         },
         "ttag_pt3_16": {
             "ALIAS": "TTAG_PT3",
             "CODE": 2,
             "UP": "path/FILE:HIST_UP",
             "DOWN": "path/FILE:HIST_DOWN",
-                "SCALE": 1.0,
+            "SCALE": 1.0,
+            "SIGMA": 10.0
+        },
+        "ptreweight": {
+            "ALIAS": "PTREWEIGHT",
+            "CODE": 2,
+            "UP": "path/FILE:HIST_UP",
+            "DOWN": "path/FILE:HIST_DOWN",
+            "SCALE": 1.0,
             "SIGMA": 1.0
         }
      },
@@ -168,7 +176,7 @@
     },
     "OPTIONS": {
 	"blindedPlots": [],
-	"blindedFit": ["cen16Pass_SIG"],
+	"blindedFit": ["cen16Pass"],
         "plotPrefitSigInFitB": true,
 	"plotUncerts": false,
 	"plotTitles": false,

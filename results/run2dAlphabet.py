@@ -54,7 +54,7 @@ params_list = [
 
 
 params_dict = {
-  
+    
     '2016/cen/':'0x0',
     '2016/fwd/':'0x0',
     '2017/cen/':'0x0',
@@ -63,6 +63,25 @@ params_dict = {
     '2018/fwd/':'0x0',
 }
 
+# params_dict = {
+    
+#     '2016/cen/':'0x2',
+#     '2016/fwd/':'2x1',
+#     '2017/cen/':'0x0',
+#     '2017/fwd/':'2x2',
+#     '2018/cen/':'2x2',
+#     '2018/fwd/':'0x0',
+# }
+
+# params_dict = {
+    
+#     '2016/cen/':'0x1',
+#     '2016/fwd/':'2x1',
+#     '2017/cen/':'0x1',
+#     '2017/fwd/':'1x1',
+#     '2018/cen/':'2x1',
+#     '2018/fwd/':'1x1',
+# }
 
 def runLimits():
     
@@ -91,27 +110,26 @@ def runLimits():
 
         for line in open('../../'+jsonfile):
 
-            # replace ttbar xsec value
-#             if '"ttbar_xsec": {' in line: 
-#                 replace_error = True
+            if '"ttbar_xsec": {' in line: 
+                replace_error = True
 
 
-#             if '_TTbar": {' in line:
-#                 replace_value = True
+            if '_TTbar": {' in line:
+                print line
+                replace_value = True
 
 
-#             if replace_error and '"VAL":' in line:
-#                 line = '            "VAL": ' + str(2.0) + '\n'
-#                 replace_error = False
+            if replace_error and '"VAL":' in line:
+                line = '            "VAL": ' + str(2.0) + '\n'
+                replace_error = False
 
 
-#             if replace_value and '"SCALE":' in line:
-#                 line = '                "SCALE": ' + str(1.0) + ', \n'
-#                 replace_value = False
+            if replace_value and '"SCALE":' in line:
+                print line
+                line = '                "SCALE": ' + str(1.0) + ', \n'
+                print line
+                replace_value = False
 
-
-            # signals to run over
-            
 
             if '	"SIGNAME": [' in line: 
                 replace_signals = True
@@ -119,8 +137,6 @@ def runLimits():
             elif replace_signals and i == 2:
                 i = 0
                 replace_signals = False
-                
-                # switch to one_signal.txt for 2 TeV rsgluon or rsgluon_signals.txt for rsgluon signals only
                 with open('../../../one_signal.txt', 'r') as file:
                     all_signals = file.read()
                     newfile.write(line.replace(line, all_signals) + '\n')
@@ -140,7 +156,7 @@ def runLimits():
         os.system('cp ttbar_'+region+year+'.json ttbar_'+region+year+'_1p0.json')
         os.system('cp new.json ttbar_'+region+year+'.json')
 
-        os.system('python ../../ttbar.py '+region+year+' limit ' + params)
+        os.system('python ../../ttbar.py '+region+year+' rebin ' + params)
 
         os.chdir('../../')
         os.system('pwd')
@@ -170,34 +186,121 @@ def runAllTransferFunctions():
             replace_value = False
             newfile = open('new.json', 'w')
 
-            
-            # replace ttbar xsec value
-#             for line in open('../../'+jsonfile):
+            for line in open('../../'+jsonfile):
 
-#                 if '"ttbar_xsec": {' in line: 
-#                     replace_error = True
+                if '"ttbar_xsec": {' in line: 
+                    replace_error = True
 
 
-#                 if '_TTbar": {' in line:
-#                     replace_value = True
+                if '_TTbar": {' in line:
+                    print line
+                    replace_value = True
 
 
-#                 if replace_error and '"VAL":' in line:
-#                     line = '            "VAL": ' + str(2.0) + '\n'
-#                     replace_error = False
+                if replace_error and '"VAL":' in line:
+                    line = '            "VAL": ' + str(2.0) + '\n'
+                    replace_error = False
 
 
-#                 if replace_value and '"SCALE":' in line:
-#                     line = '                "SCALE": ' + str(1.0) + ', \n'
-#                     replace_value = False
+                if replace_value and '"SCALE":' in line:
+                    print line
+                    line = '                "SCALE": ' + str(1.0) + ', \n'
+                    print line
+                    replace_value = False
 
-#                 newfile.write(line)
+
+
+
+                newfile.write(line)
 
             newfile.close()
 
 
             os.system('cp '+jsonfile+' '+jsonfile.replace('.json','_1p0.json'))
             os.system('cp new.json '+jsonfile)
+
+
+
+#                 i = 1
+
+#                 cmd = 'python ../../ttbar_get_xsec.py '+region+year+' test' + str(i) + ' ' + params
+
+#                 print 'running command: ' + cmd
+
+#                 os.system(cmd)
+
+
+#                 fitparams_file = open('fitparams.json')
+#                 fitparams = json.load(fitparams_file)
+
+#                 print 'ttbar_xsec value', fitparams['ttbar_xsec']['val']
+#                 print 'ttbar_xsec error', fitparams['ttbar_xsec']['error']
+
+#                 ttbar_xsec_difference = fitparams['ttbar_xsec']['val']
+
+#                 ttbar_xsec = 1.0 + ttbar_xsec_difference
+
+#                 while (abs(ttbar_xsec_difference) > 0.001):
+
+#                     print 'ttbar_xsec_difference', ttbar_xsec_difference
+
+
+
+
+#                     fitparams_file = open('fitparams.json')
+#                     fitparams = json.load(fitparams_file)
+#                     newfile = open('new.json', 'w')
+
+#                     ttbar_xsec_difference = fitparams['ttbar_xsec']['val']
+
+
+
+
+#                     replace_error = False
+#                     replace_value = False
+#                     for line in open('../../'+jsonfile):
+
+#                         if '"ttbar_xsec": {' in line: 
+#                             replace_error = True
+
+
+#                         if '_TTbar": {' in line:
+#                             replace_value = True
+
+
+#                         if replace_error and '"VAL":' in line:
+#                             line = '            "VAL": ' + str(fitparams['ttbar_xsec']['error']) + '\n'
+#                             replace_error = False
+
+
+#                         if replace_value and '"SCALE":' in line:
+#                             line = '                "SCALE": ' + str(ttbar_xsec + fitparams['ttbar_xsec']['val']) + ', \n'
+#                             replace_value = False
+
+
+
+
+#                         newfile.write(line)
+
+#                     newfile.close()
+
+
+#                     ttbar_xsec = ttbar_xsec + fitparams['ttbar_xsec']['val']
+
+
+#                     print 'new ttbar xsec ', ttbar_xsec
+
+#                     os.system('cp '+jsonfile+' ttbar_'+region+'_'+str(i)+'.json')
+#                     os.system('cp new.json '+jsonfile)
+
+
+#                     move_cmd = 'mv fitparams.json fitparams' + str(i) + '.json'
+#                     os.system(move_cmd)
+
+
+#                     i += 1
+#                     cmd = 'python ../../ttbar_get_xsec.py '+region+year+' test' + str(i) + ' ' + params
+#                     os.system(cmd)
 
 
 
