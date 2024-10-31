@@ -127,51 +127,50 @@ The configuration file that you will be using is called `bstar.json`, located in
   - A list of boolean and other options to be considered when generating the fit
   - (explanation WIP)
 
-# Running the ML fit
-By default, the `ttbar.py` python API should set up a workspace, perform the ML fit, and plot the distributions. 
+# Running the Background Estimate
+
+The files for running the background esimate are located in the `results` directory. To run the background estimate for the three years:
 
 ```
-python ttbar.py
+cd results/
+python run2dAlphabet.py 2016
+python run2dAlphabet.py 2017
+python run2dAlphabet.py 2018
 ```
 
-The output is stored in the `ttbarfits/` output directory by default.
-
-# Running the ML fit for b-tag and y analysis regions
-
-run the `python ttbar.py` command for all 6 regions:
+The transfer functions each year are specified in the dictionary 
 
 ```
-cd regions/2016
-python ttbar.py cen0b
-python ttbar.py cen1b
-python ttbar.py cen2b
-python ttbar.py fwd0b
-python ttbar.py fwd1b
-python ttbar.py fwd2b
-
+params_dict = {
+    
+    '2016/cen/':'0x0',
+    '2016/fwd/':'0x0',
+    '2017/cen/':'0x0',
+    '2017/fwd/':'0x0',
+    '2018/cen/':'0x0',
+    '2018/fwd/':'0x0',
+}
 ```
 
-This will create separate directories labelled by the region and function, for example 
+These should be determined by [FTests](#FTests) and entered by hand.
+
+The `run2dalphabet.py` script is set to run over the central and forward regions, and all specified signal samples. To change the signal samples, change the file defined in the runLimits() function:
 
 ```
-ttbarfits_cen0b_3x1
+# run the bkg estimate to get the limits
+# signal files
+# ../../../one_signal.txt for 2 TeV rsgluon only
+# ../../../rsgluon_signals.txt for rsgluon signals only
+# ../../../all_signals.txt for all signal samples
+
+runLimits(signal_file='../../../one_signal.txt')  
 ```
 
-In the ttbarfits directory, data cards are saved in the signal{XXXXX} directories. In order to combine the data cards from all 6 regions into one inclusive data card, run (still in the `regions/2016` directory)
-
-```
-./combine_cards.sh
-```
-
-The combineTool.py jobs are submitted to condor, and when the jobs are completed the combined data cards and asymptotic root files can be found in the new directory `regions/2016/ttbarfits_inclusive`
-
-In order to plot the limit, run the `limits.ipynb` notebook.
-
-Repeat these steps for 2017 and 2018 in `regions/2017` and `regions/2018`
+The script takes about 2 minutes to run over one signal sample for central and forward regions for one year. For all 59 signal samples in `all_signals.txt`, this takes about 30 minutes, so it speeds up to process to run the 2016, 2017, 2018 on three different lxplus nodes in parallel.
 
 
-The json files for the inclusive histograms are located in `inclusive/`
-The json files for the split b-tag and y regions are locateed in `regions/2016`, `regions/2017`, and `regions/2018`
+The output is stored in the `results/2016/cen/ttbarfits_cen2016_test_0x0`, for the 2016 central region for example.
+
 
 # Statistical Tests
 
@@ -216,3 +215,4 @@ Systematic uncertainties were described in the config file section above. Add th
 # Limit setting
 
 Limits for each signal are calculated using the `perform_limit` function in `ttbar.py`. The limits can then be plotted using the `set_limits.py` script, or interactively with the `limits.ipynb` notebook. The mass points and cross sections for each signal are located in `signal_xs.json`
+

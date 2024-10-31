@@ -83,7 +83,7 @@ params_dict = {
 #     '2018/fwd/':'1x1',
 # }
 
-def runLimits():
+def runLimits(signal_file='../../../one_signal.txt'):
     
     
 
@@ -137,7 +137,7 @@ def runLimits():
             elif replace_signals and i == 2:
                 i = 0
                 replace_signals = False
-                with open('../../../one_signal.txt', 'r') as file:
+                with open(signal_file, 'r') as file:
                     all_signals = file.read()
                     newfile.write(line.replace(line, all_signals) + '\n')
             elif replace_signals:
@@ -153,10 +153,13 @@ def runLimits():
 
         params = params_dict[wdir]
         print wdir, 'params', params
-        os.system('cp ttbar_'+region+year+'.json ttbar_'+region+year+'_1p0.json')
-        os.system('cp new.json ttbar_'+region+year+'.json')
+        
+        if os.path.exists('ttbar_'+region+year+'.json'):
+            os.system('cp ttbar_'+region+year+'.json ttbar_'+region+year+'_1p0.json')
+        if os.path.exists('new.json'):
+            os.system('cp new.json ttbar_'+region+year+'.json')
 
-        os.system('python ../../ttbar.py '+region+year+' rebin ' + params)
+        os.system('python ../../ttbar.py '+region+year+' test ' + params)
 
         os.chdir('../../')
         os.system('pwd')
@@ -305,7 +308,10 @@ def runAllTransferFunctions():
 
 
             os.system('python ../../ttbar.py '+region+year+' ftest ' + params)
-            os.system('cp '+jsonfile+' ttbar_'+region+year+'_' + params + '.json')
+    
+    
+            if os.path.exists(jsonfile):
+                os.system('cp '+jsonfile+' ttbar_'+region+year+'_' + params + '.json')
 
 
             os.system('mv *_test* ttbar_xsec')
@@ -321,5 +327,12 @@ def runAllTransferFunctions():
 
             
 # runAllTransferFunctions()
-runLimits()            
+
+# run the bkg estimate to get the limits
+# signal files
+# ../../../one_signal.txt for 2 TeV rsgluon only
+# ../../../rsgluon_signals.txt for rsgluon signals only
+# ../../../all_signals.txt for all signal samples
+
+runLimits(signal_file='../../../one_signal.txt')            
 
